@@ -9,9 +9,14 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import NotFound from './pages/NotFound';
 import CourseDetails from './pages/CourseDetails';
 import Director from './pages/Director';
+import OptionalListing from './pages/OptionalListing';
+import OptionalDetails from './pages/OptionalDetails';
+import MentorshipListing from './pages/MentorshipListing';
+import MentorshipDetails from './pages/MentorshipDetails';
+import EssayListing from './pages/EssayListing';
+import EssayDetails from './pages/EssayDetails';
 
-// Placeholder for remaining pages
-const Blogs = () => <div className="container" style={{ paddingTop: '150px' }}>Blogs Page</div>;
+
 
 function App() {
     return (
@@ -22,11 +27,16 @@ function App() {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/courses" element={<Courses />} />
+                <Route path="/courses/optionals" element={<OptionalListing />} />
+                <Route path="/courses/optionals/:id" element={<OptionalDetails />} />
+                <Route path="/courses/mentorship" element={<MentorshipListing />} />
+                <Route path="/courses/mentorship/:id" element={<MentorshipDetails />} />
+                <Route path="/courses/essay" element={<EssayListing />} />
+                <Route path="/courses/essay/:id" element={<EssayDetails />} />
                 <Route path="/courses/:id" element={<CourseDetails />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/director" element={<Director />} />
                 <Route path="/privacy" element={<PrivacyPolicy />} />
-                <Route path="/blogs" element={<Blogs />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>

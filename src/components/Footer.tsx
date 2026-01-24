@@ -21,7 +21,6 @@ const Footer = () => {
                         <h4>Useful Links</h4>
                         <Link to="/projects">Our Projects</Link>
                         <Link to="/about">About Us</Link>
-                        <Link to="/blogs">News & Blogs</Link>
                         <Link to="/team">Our Team</Link>
                     </div>
 
