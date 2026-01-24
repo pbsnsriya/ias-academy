@@ -1,5 +1,6 @@
 
 import Layout from '../components/Layout';
+import { Link } from 'react-router-dom';
 
 import { BookOpen } from 'lucide-react';
 import './Courses.css';
@@ -37,16 +38,29 @@ const Courses = () => {
                         <h1 className="section-title-large">The latest courses from us.</h1>
                         <div className="courses-grid">
                             {courses.map((course, index) => (
-                                <div key={index} className="course-card-alt">
-                                    {course.badge && <span className="course-badge-overlay"><BookOpen size={16} /> {course.badge}</span>}
-                                    <div className="course-img-wrap">
-                                        <img src={course.image} alt={course.title} />
+                                course.title === 'Optionals' ? (
+                                    <Link to="/courses/optionals" key={index} className="course-card-alt">
+                                        {course.badge && <span className="course-badge-overlay"><BookOpen size={16} /> {course.badge}</span>}
+                                        <div className="course-img-wrap">
+                                            <img src={course.image} alt={course.title} />
+                                        </div>
+                                        <div className="course-info-alt">
+                                            {course.duration && <span className="course-duration">{course.duration}</span>}
+                                            <h3>{course.title}</h3>
+                                        </div>
+                                    </Link>
+                                ) : (
+                                    <div key={index} className="course-card-alt">
+                                        {course.badge && <span className="course-badge-overlay"><BookOpen size={16} /> {course.badge}</span>}
+                                        <div className="course-img-wrap">
+                                            <img src={course.image} alt={course.title} />
+                                        </div>
+                                        <div className="course-info-alt">
+                                            {course.duration && <span className="course-duration">{course.duration}</span>}
+                                            <h3>{course.title}</h3>
+                                        </div>
                                     </div>
-                                    <div className="course-info-alt">
-                                        {course.duration && <span className="course-duration">{course.duration}</span>}
-                                        <h3>{course.title}</h3>
-                                    </div>
-                                </div>
+                                )
                             ))}
                         </div>
                         <div className="load-more-container">

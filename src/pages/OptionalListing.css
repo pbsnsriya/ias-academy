@@ -1,0 +1,133 @@
+.optional-page {
+    padding-top: 100px;
+}
+
+.section-title-large {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle-center {
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 4rem;
+}
+
+.optional-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.optional-card-large {
+    background: var(--bg-card);
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.optional-card-large:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.optional-img-wrap {
+    position: relative;
+    height: 250px;
+}
+
+.optional-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.optional-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.optional-subtitle {
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.optional-content {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.optional-content h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.optional-usps {
+    list-style: none;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+    flex: 1;
+}
+
+.optional-usps li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.optional-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.optional-fee {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.btn-explore {
+    background: white;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border-radius: 100px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+[data-theme='light'] .btn-explore {
+    background: black;
+    color: white;
+}
+
+.btn-explore:hover {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .optional-grid {
+        grid-template-columns: 1fr;
+    }
+}
