@@ -12,8 +12,7 @@ import Director from './pages/Director';
 import OptionalListing from './pages/OptionalListing';
 import OptionalDetails from './pages/OptionalDetails';
 
-// Placeholder for remaining pages
-const Blogs = () => <div className="container" style={{ paddingTop: '150px' }}>Blogs Page</div>;
+
 
 function App() {
     return (
@@ -30,7 +29,6 @@ function App() {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/director" element={<Director />} />
                 <Route path="/privacy" element={<PrivacyPolicy />} />
-                <Route path="/blogs" element={<Blogs />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>
