@@ -1,0 +1,345 @@
+.home-page {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 4rem 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-title {
+    font-size: 5.5rem;
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+    /* Changed to use variable */
+    position: relative;
+    letter-spacing: -2px;
+}
+
+.hero-badge-icon {
+    width: 120px;
+    position: absolute;
+    top: 0;
+    right: 50px;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    max-width: 500px;
+    line-height: 1.8;
+}
+
+.btn-primary-black {
+    background: black;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.btn-primary-black:hover {
+    transform: translateY(-2px);
+}
+
+[data-theme='dark'] .btn-primary-black {
+    background: white;
+    color: black;
+}
+
+.hero-image-masked {
+    width: 100%;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    object-fit: cover;
+    transform: scale(1.1) translateY(20px);
+}
+
+/* Prep Strip */
+/* Prep Strip - Light with specific tint */
+.prep-strip {
+    background: #F3F4F6;
+    padding: 1.5rem 0;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .prep-strip {
+    background: #1f1f1f;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.prep-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.prep-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+[data-theme='dark'] .prep-item {
+    color: #ccc;
+}
+
+/* Dark Info Section */
+/* Dark Info Section - Always Dark */
+.info-section-dark {
+    background: #000000;
+    padding: 6rem 0;
+    color: white;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.info-card-dark h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: white;
+}
+
+.info-card-dark p {
+    color: #9CA3AF;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.link-more-light {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 2px;
+    width: fit-content;
+    transition: all 0.3s;
+}
+
+.link-more-light:hover {
+    gap: 0.8rem;
+    border-bottom-color: white;
+}
+
+/* Project List */
+/* Project List - Uses main theme background (usually light in light mode) */
+.project-section {
+    padding: 6rem 0;
+    background-color: var(--bg-dark);
+}
+
+.section-header-left {
+    margin-bottom: 4rem;
+}
+
+.section-title-simple {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.project-list-badge {
+    background: #3B82F6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-grid-large {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.project-card-large img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+.project-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.project-content h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Live Classes */
+/* Live Classes - Dark Container */
+.live-classes {
+    background-color: var(--bg-dark);
+}
+
+.dark-card {
+    background: #000;
+    padding: 5rem;
+    border-radius: 40px;
+    color: white;
+}
+
+.live-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.live-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.btn-small-outline {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.live-item {
+    display: flex;
+    gap: 3rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.item-id {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.item-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-content p {
+    color: #9CA3AF;
+    max-width: 600px;
+}
+
+/* Team */
+.team-section {
+    padding: 6rem 0;
+}
+
+.team-featured-simple img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 24px 24px 0 0;
+}
+
+.team-quote-simple {
+    background: var(--bg-card);
+    padding: 3rem;
+    border-radius: 0 0 24px 24px;
+}
+
+.team-quote-simple p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Marquee */
+.marquee-section {
+    padding: 2rem 0;
+    background: var(--bg-dark);
+    /* Match background */
+    overflow: hidden;
+}
+
+@media (max-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-badge-icon {
+        position: relative;
+        right: auto;
+        display: block;
+        margin: 1rem auto;
+    }
+
+    .hero-subtitle {
+        margin: 0 auto 3rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .prep-container {
+        justify-content: center;
+    }
+
+    .project-grid-large {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .dark-card {
+        padding: 2rem;
+    }
+
+    .live-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
