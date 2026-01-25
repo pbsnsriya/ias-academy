@@ -4,7 +4,7 @@
 
 /* Hero Section */
 .hero-section {
-    padding: 6rem 0;
+    padding: 4rem 0;
     overflow: hidden;
     position: relative;
     background-color: #fff;
@@ -73,7 +73,7 @@
 
 .badge-text-rotate {
     transform-origin: center;
-    animation: rotate 20s linear infinite;
+    animation: rotate 10s linear infinite;
 }
 
 @keyframes rotate {
@@ -146,14 +146,14 @@
 
 /* Let's try a better notched path that more closely matches the image */
 .hero-image-mask {
-    clip-path: path("M480 0H120C120 0 120 0 120 0V110C120 132.091 102.091 150 80 150H0V450C0 472.091 17.9086 490 40 490H380C380 490 380 490 380 490V390C380 367.909 397.909 350 420 350H500V20C500 8.9543 491.046 0 480 0Z");
+    /* clip-path: path("M480 0H120C120 0 120 0 120 0V110C120 132.091 102.091 150 80 150H0V450C0 472.091 17.9086 490 40 490H380C380 490 380 490 380 490V390C380 367.909 397.909 350 420 350H500V20C500 8.9543 491.046 0 480 0Z"); */
 }
 
 /* Correction for scale since path is absolute */
 .hero-image-mask {
-    width: 500px;
-    height: 490px;
-    clip-path: path("M480 0H120C120 0 120 0 120 0V110C120 132.091 102.091 150 80 150H0V450C0 472.091 17.9086 490 40 490H380C380 490 380 490 380 490V390C380 367.909 397.909 350 420 350H500V20C500 8.9543 491.046 0 480 0Z");
+    width: 70%;
+    height: 10%;
+    /* clip-path: path("M480 0H120C120 0 120 0 120 0V110C120 132.091 102.091 150 80 150H0V450C0 472.091 17.9086 490 40 490H380C380 490 380 490 380 490V390C380 367.909 397.909 350 420 350H500V20C500 8.9543 491.046 0 480 0Z"); */
 }
 
 .hero-image-main {
@@ -297,6 +297,14 @@
     margin-bottom: 1rem;
 }
 
+.project-card-large:hover {
+    cursor: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 32 32'>\
+  <circle cx='16' cy='16' r='15' fill='greenyellow' />\
+  <path d='M11 21 L21 11 M14 11 H21 V18' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round' />\
+</svg>") 16 16, pointer;
+}
+
 .project-label {
     font-size: 0.8rem;
     color: var(--text-muted);
@@ -317,7 +325,7 @@
 
 .dark-card {
     background: #000;
-    padding: 5rem;
+    padding: 3rem !important;
     border-radius: 40px;
     color: white;
 }
@@ -345,12 +353,39 @@
 }
 
 .live-item {
-    display: grid;
-    grid-template-columns: 80px 1fr 2fr;
-    gap: 2rem;
-    padding: 2.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+}
+
+.live-item:hover {
+  cursor: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 32 32'>\
+  <circle cx='16' cy='16' r='15' fill='greenyellow' />\
+  <path d='M11 21 L21 11 M14 11 H21 V18' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round' />\
+</svg>") 16 16, pointer;
+}
+
+.live-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  gap: 2rem;
+}
+
+/* Individual item */
+.live-item {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Inner content */
+.live-item .flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .item-id {
@@ -434,8 +469,13 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
     text-align: left;
+}
+
+.gallery-image {
+    width: 100%;
+    border-radius: 40px;
 }
 
 .message-badge img {
@@ -454,6 +494,37 @@
     font-size: 0.85rem;
     color: #666;
 }
+
+.playButton {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.icon {
+  color: white;  
+  fill: white;
+  transition: color 0.25s ease, fill 0.25s ease;
+}
+
+/* Hover state */
+.playButton:hover {
+  background-color: greenyellow;
+}
+
+.playButton:hover .icon {
+  color: black;          /* stroke stays black */
+  fill: black;           /* fill turns black */
+}
+
 
 @media (max-width: 768px) {
     .about-title {

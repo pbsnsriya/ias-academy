@@ -1,7 +1,7 @@
 
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen, Plus } from 'lucide-react';
+import { ArrowRight, BookOpen, Play, Plus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -30,7 +30,7 @@ const Home = () => {
                                         <defs>
                                             <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0 " />
                                         </defs>
-                                        <text fontSize="8.5" fontWeight="600" fill="currentColor">
+                                        <text fontSize="8.5" fontWeight="600" fill="currentColor" className='badge-text-rotate'>
                                             <textPath xlinkHref="#circlePath">
                                                 CONSISTENCY • EQUANIMITY • DISCIPLINE • DEDICATION •
                                             </textPath>
@@ -78,7 +78,7 @@ const Home = () => {
                             className="hero-image-wrapper"
                         >
                             <div className="hero-image-mask">
-                                <img src="/assets/images/optional.png" alt="IAS Academy Hero" className="hero-image-main" />
+                                <img src="/assets/images/director.png" alt="IAS Academy Hero" className="hero-image-main" />
                             </div>
                         </motion.div>
                     </div>
@@ -103,13 +103,42 @@ const Home = () => {
                 >
                     <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200" alt="Large crowd" />
                     <div className="message-badge">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100" alt="Dr Vivekananda" />
+                        {/* <img src="" alt="Dr Vivekananda" /> */}
+                        <div className="playButton">
+                            <Play size={20} className="icon" />
+                        </div>
                         <div>
                             <h4>Message from Dr. Vivekananda</h4>
                             <p>Founder of Dr. Vivekananda IAS Academy</p>
                         </div>
                     </div>
                 </motion.div>
+
+                {/* Live Classes Section */}
+                <section className="live-classes">
+                    <div className="container dark-card">
+                        <div className="live-header">
+                            <h2>Our Gallery</h2>
+                            <Link to="/contact" className="btn-small-outline">Let's Talk with Us <ArrowRight size={16} /></Link>
+                        </div>
+                        <div className="live-list">
+                            {[
+                                { id: '01', imgSrc: "assets/images/director2.jpeg", title: 'Our Toppers', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
+                                { id: '02', imgSrc: "assets/images/director2.jpeg", title: 'Public Events', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
+                                { id: '03', imgSrc: "assets/images/director2.jpeg", title: 'Podcasts', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
+                                { id: '04', imgSrc: "assets/images/director2.jpeg", title: 'Seminars', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
+                            ].map(item => (
+                                <div key={item.id} className="live-item">
+                                    <img src={item.imgSrc} alt="Director" className='gallery-image' />
+                                    <div className='flex'>
+                                        <h4 className="item-content-title">{item.title}</h4>
+                                        <p className="item-content-desc">{item.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
 
                 {/* More about us / Project List */}
                 <section className="project-section">
@@ -119,8 +148,26 @@ const Home = () => {
                         </div>
 
                         <div className="project-grid-large">
+                            {[
+                                { id: '01', imgSrc: "assets/images/director2.jpeg", title: 'Our Director', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
+                                { id: '02', imgSrc: "assets/images/director2.jpeg", title: 'Our Courses', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
+                                { id: '03', imgSrc: "assets/images/director2.jpeg", title: 'Our Testimonials', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
+                                { id: '04', imgSrc: "assets/images/director2.jpeg", title: 'Our Accolades', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
+                            ].map(item => (
+                                <div key={item.id} className="project-card-large">
+                                    {/* <span className="item-id">{item.id}</span> */}
+                                    <img src={item.imgSrc} alt="Director" />
+                                    <div className="project-content">
+                                        <h4>{item.title}</h4>
+                                        <p className="project-label">{item.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* <div className="project-grid-large">
                             <div className="project-card-large">
-                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600" alt="Director" />
+                                <img src="assets/images/director2.jpeg" alt="Director" />
                                 <div className="project-content">
                                     <span className="project-label">Our Director</span>
                                     <h4>Our Director</h4>
@@ -147,50 +194,7 @@ const Home = () => {
                                     <h4>Our Accolades</h4>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Live Classes Section */}
-                <section className="live-classes">
-                    <div className="container dark-card">
-                        <div className="live-header">
-                            <h2>Live Classes</h2>
-                            <Link to="/contact" className="btn-small-outline">Let's Talk with Us <ArrowRight size={16} /></Link>
-                        </div>
-                        <div className="live-list">
-                            {[
-                                { id: '01', title: 'Real Time Interaction', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
-                                { id: '02', title: 'Recording & sharing', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
-                                { id: '03', title: 'Quizzes', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
-                                { id: '04', title: 'Online Debates', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
-                            ].map(item => (
-                                <div key={item.id} className="live-item">
-                                    <span className="item-id">{item.id}</span>
-                                    <h4 className="item-content-title">{item.title}</h4>
-                                    <p className="item-content-desc">{item.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Meet the Team Section */}
-                <section className="team-section">
-                    <div className="container">
-                        <h2 className="section-title-simple">Meet the team</h2>
-                        <div className="team-featured-simple">
-                            <img src="/assets/images/team.png" alt="The Team" />
-                            <div className="team-quote-simple">
-                                <p>
-                                    Our one-on-one sessions provide personalized mentorship tailored to each aspirant's
-                                    strengths, weaknesses, and preparation stage. Every session is designed to offer focused
-                                    guidance, customized study strategies, and continuous feedback, helping students build
-                                    strong fundamentals, improve answer writing, and prepare with clarity and confidence for
-                                    every stage of the IAS examination.
-                                </p>
-                            </div>
-                        </div>
+                        </div> */}
                     </div>
                 </section>
             </div>
