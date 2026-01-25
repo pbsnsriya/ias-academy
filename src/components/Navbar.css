@@ -37,10 +37,12 @@
     background: var(--glass);
     padding: 0.5rem 2rem;
     border-radius: 100px;
+    border: 1px solid var(--border);
 }
 
 [data-theme='light'] .nav-links {
     background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
 .nav-link {
