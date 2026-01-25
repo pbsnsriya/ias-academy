@@ -70,12 +70,25 @@
     color: black;
 }
 
+.hero-image-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
 .hero-image-masked {
     width: 100%;
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    height: 500px;
     object-fit: cover;
-    transform: scale(1.1) translateY(20px);
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-image-container:hover .hero-image-masked {
+    transform: scale(1.05);
 }
 
 /* Prep Strip */
