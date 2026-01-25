@@ -60,7 +60,7 @@ const Home = () => {
                             transition={{ duration: 0.8 }}
                             className="hero-image-container"
                         >
-                            <img src="public/assets/images/optional.png" alt="IAS Academy Hero" className="hero-image-masked" />
+                            <img src="/assets/images/optional.png" alt="IAS Academy Hero" className="hero-image-masked" />
                         </motion.div>
                     </div>
                 </section>
@@ -170,7 +170,7 @@ const Home = () => {
                     <div className="container">
                         <h2 className="section-title-simple">Meet the team</h2>
                         <div className="team-featured-simple">
-                            <img src="public/assets/images/team.png" alt="The Team" />
+                            <img src="/assets/images/team.png" alt="The Team" />
                             <div className="team-quote-simple">
                                 <p>
                                     Our one-on-one sessions provide personalized mentorship tailored to each aspirant's
