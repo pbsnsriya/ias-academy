@@ -108,10 +108,9 @@
     text-align: center;
     padding: 4rem;
     position: relative;
-    background: #050505;
-    color: white;
+    background: var(--primary);
+    color: rgb(129, 99, 213);
     border: none;
-    border-radius: 40px;
 }
 
 .quote-icon {
