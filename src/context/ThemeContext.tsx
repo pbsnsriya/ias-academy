@@ -10,7 +10,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [theme, setTheme] = useState<string>(() => {
         const saved = localStorage.getItem('theme');
-        return saved || 'dark';
+        return saved || 'light';
     });
 
     useEffect(() => {
@@ -19,7 +19,8 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     }, [theme]);
 
     const toggleTheme = () => {
-        setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+        // Feature disabled for permanent light mode
+        setTheme('light');
     };
 
     return (

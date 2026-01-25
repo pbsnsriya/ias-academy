@@ -7,12 +7,10 @@
     padding: 4rem 0;
     overflow: hidden;
     position: relative;
-    background-color: #fff;
+    background-color: #e8e7e7;
 }
 
-[data-theme='dark'] .hero-section {
-    background-color: #050505;
-}
+/* Removed dark mode override */
 
 .hero-grid-bg {
     position: absolute;
@@ -28,11 +26,7 @@
     z-index: 1;
 }
 
-[data-theme='dark'] .hero-grid-bg {
-    background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-}
+/* Removed dark mode override */
 
 .hero-container {
     display: flex;
@@ -115,10 +109,7 @@
     background: #222;
 }
 
-[data-theme='dark'] .btn-hero-pill {
-    background: #fff;
-    color: #000;
-}
+/* Removed dark mode override */
 
 .hero-image-wrapper {
     flex: 1;
@@ -174,10 +165,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-[data-theme='dark'] .prep-strip {
-    background: #1f1f1f;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
+/* Removed dark mode override */
 
 .prep-container {
     display: flex;

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, ArrowRight } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
 const Navbar = () => {
