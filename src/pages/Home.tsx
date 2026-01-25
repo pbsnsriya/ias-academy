@@ -37,7 +37,7 @@ const Home = () => {
                                         </text>
                                         <image
                                             href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/256px-Emblem_of_India.svg.png"
-                                            x="30" y="30" width="50" height="50"
+                                            x="25" y="25" width="50" height="50"
                                         />
                                     </svg>
                                 </div>
@@ -87,44 +87,35 @@ const Home = () => {
                 {/* Preparation Strip */}
                 <div className="prep-strip">
                     <div className="container prep-container">
-                        {['MAINS', 'PRELIMS', 'INTERVIEW', 'PREPARATION', 'AFFAIRS', 'SOLUTION', 'GENERAL KNOWLEDGE'].map((item) => (
+                        {['Consistency', 'Equanimity', 'Grit', 'Discipline', 'Unwavering focus', 'Dedication'].map((item) => (
                             <div key={item} className="prep-item">
                                 <span>{item}</span>
-                                <Plus size={16} />
                             </div>
                         ))}
                     </div>
                 </div>
 
-                {/* Dark Info Section */}
-                <section className="info-section-dark">
-                    <div className="container">
-                        <div className="info-grid">
-                            <div className="info-card-dark">
-                                <h3>Who we are & what we do</h3>
-                                <p>Discover our identity, mission, and the impactful work we do to make a difference.</p>
-                                <Link to="/about" className="link-more-light">Learn more <ArrowRight size={16} /></Link>
-                            </div>
-                            <div className="info-card-dark">
-                                <h3>We'll take you to your dreams</h3>
-                                <p>Turning your vision into reality with expert faculty and learning.</p>
-                                <Link to="/courses" className="link-more-light">Learn more <ArrowRight size={16} /></Link>
-                            </div>
-                            <div className="info-card-dark">
-                                <h3>Drop us your message!</h3>
-                                <p>Get information on a course that you are comfortable with</p>
-                                <Link to="/contact" className="link-more-light">Learn more <ArrowRight size={16} /></Link>
-                            </div>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.4 }}
+                    className="about-image-main"
+                >
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200" alt="Large crowd" />
+                    <div className="message-badge">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100" alt="Dr Vivekananda" />
+                        <div>
+                            <h4>Message from Dr. Vivekananda</h4>
+                            <p>Founder of Dr. Vivekananda IAS Academy</p>
                         </div>
                     </div>
-                </section>
+                </motion.div>
 
                 {/* More about us / Project List */}
                 <section className="project-section">
                     <div className="container">
                         <div className="section-header-left">
                             <h2 className="section-title-simple">More about us</h2>
-                            <span className="project-list-badge"><BookOpen size={16} /> Project List</span>
                         </div>
 
                         <div className="project-grid-large">

@@ -38,7 +38,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 4rem;
     position: relative;
     z-index: 2;
 }
@@ -57,7 +56,7 @@
 
 .hero-title {
     font-size: 5rem;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 1.1;
     margin: 0;
     color: var(--text-main);
@@ -67,6 +66,9 @@
 .hero-circular-badge {
     flex-shrink: 0;
     color: var(--text-main);
+    position: absolute;
+    left: 50%;  
+    top: 0;
 }
 
 .badge-text-rotate {
@@ -168,6 +170,7 @@
     padding: 1.5rem 0;
     position: relative;
     z-index: 10;
+    margin-bottom: 30px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -401,6 +404,72 @@
     background: var(--bg-dark);
     /* Match background */
     overflow: hidden;
+}
+
+.about-image-main {
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    height: 600px;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.about-image-main img {
+    width: 80% !important;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+.message-badge {
+    position: absolute;
+    bottom: 0 !important;
+    right: 10% !important;
+    background: white;
+    color: black;
+    padding: 1.5rem;
+    border-radius: 40px !important;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.message-badge img {
+    width: 60px !important;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.message-badge h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.message-badge p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 3rem;
+    }
+
+    .about-image-main {
+        height: 400px;
+    }
+
+    .message-badge {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 992px) {

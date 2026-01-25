@@ -46,7 +46,6 @@ const Navbar = () => {
                 </div>
 
                 <div className="nav-right">
-                    <ThemeToggle />
                     <Link to="/contact" className="btn-touch">
                         Get in Touch <ArrowRight size={18} />
                     </Link>
