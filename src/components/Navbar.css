@@ -23,6 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 !important;
 }
 
 .logo {
@@ -33,7 +34,8 @@
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 6rem;
+    overflow: hidden;
     /* background: #fff; */
     padding: 0.75rem 3rem;
     /* border-radius: 100px;
@@ -46,10 +48,17 @@
     border-color: rgba(255, 255, 255, 0.1);
 }
 
+.nav-link-transition {
+    display: flex;
+    align-items: center;
+}
+
 .nav-link {
     font-size: 0.95rem;
     font-weight: 600;
     color: #4b5563;
+    position: relative;
+    display: inline-block;
 }
 
 .nav-link:hover,
@@ -74,11 +83,6 @@
     font-size: 0.85rem;
     font-weight: 600;
     transition: var(--transition);
-}
-
-.btn-touch:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px var(--primary-glow);
 }
 
 .mobile-toggle {
@@ -109,7 +113,85 @@
     visibility: visible;
 }
 
-@media (max-width: 768px) {
+.top-nav-name,
+.bottom-nav-name {
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Initial states */
+.top-nav-name {
+  transform: translateY(0);
+  opacity: 1;
+  cursor: pointer;
+  top: -10px
+}
+
+.bottom-nav-name {
+  transform: translateY(100%);
+  opacity: 0;
+  cursor: none;
+}
+
+/* Hover state */
+.nav-link:hover .top-nav-name {
+  transform: translateY(-50%);
+  opacity: 0;
+  cursor: none;
+}
+
+.nav-link:hover .bottom-nav-name {
+  transform: translateY(-50%);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.btn-touch-transition {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 120px;
+    height: 24px;
+}
+
+.arrow-btn {
+  position: absolute;
+  right: 0;
+}
+
+.top-btn-touch,
+.bottom-btn-touch {
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Initial states */
+.top-btn-touch {
+  transform: translateY(0);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.bottom-btn-touch {
+  transform: translateY(100%);
+  opacity: 0;
+  cursor: none;
+}
+
+/* Hover state */
+.btn-touch:hover .top-btn-touch {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.btn-touch:hover .bottom-btn-touch {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+@media (max-width: 940px) {
 
     .nav-links,
     .btn-touch {
@@ -128,6 +210,6 @@
     .mobile-btn {
         display: flex;
         justify-content: center;
-        width: 100%;
+        width: 30%;
     }
 }

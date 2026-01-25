@@ -71,6 +71,14 @@
     top: 0;
 }
 
+@media (max-width: 1000px) {
+    .hero-circular-badge {
+        position: static;
+        transform: none;
+        margin-bottom: 1.5rem;
+    }
+}
+
 .badge-text-rotate {
     transform-origin: center;
     animation: rotate 10s linear infinite;
@@ -356,8 +364,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   gap: 2rem;
-  padding: 2.5rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
   align-items: center;
 }
 
@@ -377,8 +384,7 @@
 
 /* Individual item */
 .live-item {
-  padding: 2.5rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
 }
 
 /* Inner content */

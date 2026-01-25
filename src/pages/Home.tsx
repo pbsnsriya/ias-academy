@@ -2,7 +2,7 @@
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { ArrowRight, BookOpen, Play, Plus } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
@@ -67,7 +67,7 @@ const Home = () => {
                                 className="hero-actions"
                             >
                                 <Link to="/contact" className="btn-hero-pill">
-                                    Contact Us <ArrowRight size={20} />
+                                    Talk to Us <ArrowRight size={20} />
                                 </Link>
                             </motion.div>
                         </div>
@@ -119,22 +119,21 @@ const Home = () => {
                     <div className="container dark-card">
                         <div className="live-header">
                             <h2>Our Gallery</h2>
-                            <Link to="/contact" className="btn-small-outline">Let's Talk with Us <ArrowRight size={16} /></Link>
                         </div>
                         <div className="live-list">
                             {[
-                                { id: '01', imgSrc: "assets/images/director2.jpeg", title: 'Our Toppers', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
-                                { id: '02', imgSrc: "assets/images/director2.jpeg", title: 'Public Events', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
-                                { id: '03', imgSrc: "assets/images/director2.jpeg", title: 'Podcasts', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
-                                { id: '04', imgSrc: "assets/images/director2.jpeg", title: 'Seminars', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
+                                { id: '01', imgSrc: "assets/images/director2.jpeg", link: "/gallery/toppers", title: 'Our Toppers', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
+                                { id: '02', imgSrc: "assets/images/director2.jpeg", link: "/gallery/events", title: 'Public Events', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
+                                { id: '03', imgSrc: "assets/images/director2.jpeg", link: "/podcasts", title: 'Podcasts', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
+                                { id: '04', imgSrc: "assets/images/director2.jpeg", link: "/seminars", title: 'Seminars', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
                             ].map(item => (
-                                <div key={item.id} className="live-item">
+                                <NavLink key={item.id} to={item.link} className="live-item">
                                     <img src={item.imgSrc} alt="Director" className='gallery-image' />
                                     <div className='flex'>
                                         <h4 className="item-content-title">{item.title}</h4>
                                         <p className="item-content-desc">{item.desc}</p>
                                     </div>
-                                </div>
+                                </NavLink>
                             ))}
                         </div>
                     </div>
@@ -149,19 +148,19 @@ const Home = () => {
 
                         <div className="project-grid-large">
                             {[
-                                { id: '01', imgSrc: "assets/images/director2.jpeg", title: 'Our Director', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
-                                { id: '02', imgSrc: "assets/images/director2.jpeg", title: 'Our Courses', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
-                                { id: '03', imgSrc: "assets/images/director2.jpeg", title: 'Our Testimonials', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
-                                { id: '04', imgSrc: "assets/images/director2.jpeg", title: 'Our Accolades', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
+                                { id: '01', imgSrc: "assets/images/director2.jpeg", link: "/director", title: 'Our Director', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
+                                { id: '02', imgSrc: "assets/images/director2.jpeg", link: "/courses", title: 'Our Courses', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
+                                { id: '03', imgSrc: "assets/images/director2.jpeg", link: "/tesimonials", title: 'Our Testimonials', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
+                                { id: '04', imgSrc: "assets/images/director2.jpeg", link: "/accolades", title: 'Our Accolades', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
                             ].map(item => (
-                                <div key={item.id} className="project-card-large">
+                                <NavLink key={item.id} to={item.link}className="project-card-large">
                                     {/* <span className="item-id">{item.id}</span> */}
                                     <img src={item.imgSrc} alt="Director" />
                                     <div className="project-content">
                                         <h4>{item.title}</h4>
                                         <p className="project-label">{item.desc}</p>
                                     </div>
-                                </div>
+                                </NavLink>
                             ))}
                         </div>
 

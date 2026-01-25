@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 4rem;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
 }
 
 .brand-title {
@@ -113,7 +113,7 @@
 .footer-bottom {
     text-align: center;
     position: relative;
-    padding: 8rem 0 4rem;
+    /* padding: 8rem 0 4rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,25 +121,31 @@
 }
 
 .bg-text {
-    font-size: 11vw;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.03);
-    /* More subtle as per latest image */
-    line-height: 1;
-    letter-spacing: 0.5rem;
-    pointer-events: none;
-    text-transform: uppercase;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    z-index: 1;
-    margin: 0;
+  font-size: 10vw;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.01)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+
 .copyright {
-    color: #64748b;
+    color: #8997ab;
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.05em;

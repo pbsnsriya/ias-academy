@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Linkedin, X, Dribbble, ArrowUpRight } from 'lucide-react';
+import { Linkedin, X, Dribbble, ArrowUpRight, Twitter, Youtube, Instagram } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -19,16 +19,17 @@ const Footer = () => {
 
                     <div className="footer-links">
                         <h4>Useful Links</h4>
-                        <Link to="/projects">Our Projects</Link>
-                        <Link to="/about">About Us</Link>
-                        <Link to="/team">Our Team</Link>
+                        <Link to="/projects">Our Courses</Link>
+                        <Link to="/about">About Our Academy</Link>
+                        <Link to="/gallery">Our Gallery</Link>
+                        <Link to="/blogs">Read Our Blogs</Link>
                     </div>
 
                     <div className="footer-links">
                         <h4>Information</h4>
+                        <Link to="/director">Our Director</Link>
                         <Link to="/contact">Contact Us</Link>
-                        <Link to="/privacy">Privacy Policy</Link>
-                        <Link to="/404">Error 404</Link>
+                        <Link to="/letstalk">Talk to Dr. Vivek</Link>
                     </div>
 
                     <div className="footer-social">
@@ -36,8 +37,9 @@ const Footer = () => {
                         <p>Connect with us via our socials</p>
                         <div className="social-icons">
                             <a href="#" className="social-icon"><Linkedin size={20} /></a>
-                            <a href="#" className="social-icon"><X size={20} /></a>
-                            <a href="#" className="social-icon"><Dribbble size={20} /></a>
+                            <a href="#" className="social-icon"><Instagram size={20} /></a>
+                            <a href="#" className="social-icon"><Twitter size={20} /></a>
+                            <a href="#" className="social-icon"><Youtube size={20} /></a>
                         </div>
                     </div>
                 </div>
