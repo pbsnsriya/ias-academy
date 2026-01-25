@@ -67,10 +67,9 @@
 .hero-circular-badge {
     flex-shrink: 0;
     color: var(--text-main);
-    position: relative;
 }
 
-.hero-badge-text {
+.badge-text-rotate {
     transform-origin: center;
     animation: rotate 20s linear infinite;
 }
@@ -130,7 +129,6 @@
     max-width: 550px;
     height: 550px;
     position: relative;
-    background: #eee;
     border-radius: 40px;
     overflow: hidden;
     /* Creating the "notch" effect with clip-path */
