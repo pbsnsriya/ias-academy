@@ -67,7 +67,7 @@
     flex-shrink: 0;
     color: var(--text-main);
     position: absolute;
-    left: 50%;  
+    left: 50%;
     top: 0;
 }
 
@@ -353,16 +353,17 @@
 }
 
 .live-item {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 2rem;
-  padding: 2.5rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    gap: 2rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    align-items: center;
 }
 
 .live-item:hover {
-  cursor: url("data:image/svg+xml;utf8,\
+    cursor: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 32 32'>\
   <circle cx='16' cy='16' r='15' fill='greenyellow' />\
   <path d='M11 21 L21 11 M14 11 H21 V18' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round' />\
@@ -370,22 +371,23 @@
 }
 
 .live-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 items per row */
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 items per row */
+    gap: 2rem;
 }
 
 /* Individual item */
 .live-item {
-  padding: 2.5rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Inner content */
 .live-item .flex {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .item-id {
@@ -496,33 +498,35 @@
 }
 
 .playButton {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background-color: black;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: black;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  cursor: pointer;
-  transition: background-color 0.25s ease;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
 }
 
 .icon {
-  color: white;  
-  fill: white;
-  transition: color 0.25s ease, fill 0.25s ease;
+    color: white;
+    fill: white;
+    transition: color 0.25s ease, fill 0.25s ease;
 }
 
 /* Hover state */
 .playButton:hover {
-  background-color: greenyellow;
+    background-color: greenyellow;
 }
 
 .playButton:hover .icon {
-  color: black;          /* stroke stays black */
-  fill: black;           /* fill turns black */
+    color: black;
+    /* stroke stays black */
+    fill: black;
+    /* fill turns black */
 }
 
 
