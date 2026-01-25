@@ -203,10 +203,10 @@
 /* Dark Info Section */
 /* Dark Info Section - Always Dark */
 .info-section-dark {
-    background: #232d3f;
-    /* Dark slate grey as per image */
+    background: #f8fafc;
+    /* Changed to light grey */
     padding: 6rem 0;
-    color: white;
+    color: var(--text-main);
 }
 
 .info-grid {
@@ -226,11 +226,11 @@
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    color: white;
+    color: var(--text-main);
 }
 
 .info-card-dark p {
-    color: #9CA3AF;
+    color: var(--text-muted);
     margin-bottom: 2rem;
     line-height: 1.6;
 }
@@ -239,9 +239,9 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: white;
+    color: var(--text-main);
     font-weight: 600;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     padding-bottom: 2px;
     width: fit-content;
     transition: all 0.3s;
@@ -251,7 +251,7 @@
 
 .link-more-light:hover {
     gap: 0.8rem;
-    border-bottom-color: white;
+    border-bottom-color: var(--text-main);
 }
 
 /* Project List */
@@ -324,10 +324,11 @@
 }
 
 .dark-card {
-    background: #000;
+    background: #f1f5f9;
+    /* Changed to light blue-grey */
     padding: 3rem !important;
     border-radius: 40px;
-    color: white;
+    color: var(--text-main);
 }
 
 .live-header {
@@ -343,13 +344,14 @@
 }
 
 .btn-small-outline {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 0.5rem 1rem;
     border-radius: 100px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
+    color: var(--text-main);
 }
 
 .live-item {
@@ -393,19 +395,18 @@
 .item-id {
     font-size: 1.5rem;
     font-weight: 700;
-    color: white;
-    opacity: 0.8;
+    color: var(--text-main);
 }
 
 .item-content-title {
     font-size: 1.8rem;
     font-weight: 700;
-    color: white;
+    color: var(--text-main);
     margin: 0;
 }
 
 .item-content-desc {
-    color: #9CA3AF;
+    color: var(--text-muted);
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 0;
