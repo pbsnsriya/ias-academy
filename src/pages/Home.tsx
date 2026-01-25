@@ -19,16 +19,14 @@ const Home = () => {
                                 transition={{ duration: 0.6 }}
                                 className="hero-title"
                             >
-                                India's Most <br />
-                                Affordable IAS <br />
-                                Training Academy
                                 <motion.img
                                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/256px-Emblem_of_India.svg.png"
                                     alt="Badge"
                                     className="hero-badge-icon"
-                                    animate={{ rotate: 360 }}
-                                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                                 />
+                                India's Most <br />
+                                Affordable IAS <br />
+                                Training Academy
                             </motion.h1>
 
                             <motion.p
@@ -62,7 +60,7 @@ const Home = () => {
                             transition={{ duration: 0.8 }}
                             className="hero-image-container"
                         >
-                            <img src="/public/ias_hero_image.png" alt="IAS Academy Hero" className="hero-image-masked" />
+                            <img src="public/assets/images/optional.png" alt="IAS Academy Hero" className="hero-image-masked" />
                         </motion.div>
                     </div>
                 </section>
@@ -159,10 +157,8 @@ const Home = () => {
                             ].map(item => (
                                 <div key={item.id} className="live-item">
                                     <span className="item-id">{item.id}</span>
-                                    <div className="item-content">
-                                        <h4>{item.title}</h4>
-                                        <p>{item.desc}</p>
-                                    </div>
+                                    <h4 className="item-content-title">{item.title}</h4>
+                                    <p className="item-content-desc">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -174,7 +170,7 @@ const Home = () => {
                     <div className="container">
                         <h2 className="section-title-simple">Meet the team</h2>
                         <div className="team-featured-simple">
-                            <img src="https://images.unsplash.com/photo-1600880212340-0234403d18ff?q=80&w=1200" alt="The Team" />
+                            <img src="public/assets/images/team.png" alt="The Team" />
                             <div className="team-quote-simple">
                                 <p>
                                     Our one-on-one sessions provide personalized mentorship tailored to each aspirant's
