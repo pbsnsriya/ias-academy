@@ -11,7 +11,7 @@ const Courses = () => {
             id: 'optionals',
             title: 'Optionals',
             duration: '4 months',
-            image: 'public/assets/images/optional.png',
+            image: '/assets/images/optional.png',
             badge: 'Course Title'
         },
         {

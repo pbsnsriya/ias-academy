@@ -4,91 +4,162 @@
 
 /* Hero Section */
 .hero-section {
-    padding: 4rem 0 2rem;
+    padding: 6rem 0;
     overflow: hidden;
     position: relative;
+    background-color: #fff;
+}
+
+[data-theme='dark'] .hero-section {
+    background-color: #050505;
+}
+
+.hero-grid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+[data-theme='dark'] .hero-grid-bg {
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
 .hero-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
+    justify-content: space-between;
+    gap: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-title-wrapper {
+    display: flex;
+    align-items: center;
     gap: 3rem;
+    margin-bottom: 2rem;
 }
 
 .hero-title {
-    font-size: 5.5rem;
+    font-size: 5rem;
     font-weight: 800;
-    line-height: 1.05;
-    margin-bottom: 2rem;
+    line-height: 1.1;
+    margin: 0;
+    color: var(--text-main);
+    letter-spacing: -2px;
+}
+
+.hero-circular-badge {
+    flex-shrink: 0;
     color: var(--text-main);
     position: relative;
-    letter-spacing: -2px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.hero-badge-icon {
-    width: 100px;
-    margin-bottom: 0.5rem;
-    opacity: 0.9;
-    pointer-events: none;
+.hero-badge-text {
+    transform-origin: center;
+    animation: rotate 20s linear infinite;
 }
 
-[data-theme='dark'] .hero-badge-icon {
-    filter: invert(1) brightness(1.1);
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-subtitle-container {
+    margin-bottom: 3rem;
+    max-width: 600px;
 }
 
 .hero-subtitle {
     font-size: 1.1rem;
     color: var(--text-muted);
-    margin-bottom: 3rem;
-    max-width: 800px;
-    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
 }
 
-.btn-primary-black {
-    background: black;
-    color: white;
+.btn-hero-pill {
+    background: #000;
+    color: #fff;
     padding: 1rem 2rem;
     border-radius: 100px;
     font-weight: 700;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    transition: transform 0.3s;
+    gap: 0.8rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-primary-black:hover {
-    transform: translateY(-2px);
+.btn-hero-pill:hover {
+    transform: scale(1.05);
+    background: #222;
 }
 
-[data-theme='dark'] .btn-primary-black {
-    background: white;
-    color: black;
+[data-theme='dark'] .btn-hero-pill {
+    background: #fff;
+    color: #000;
 }
 
-.hero-image-container {
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image-mask {
     width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 550px;
+    height: 550px;
+    position: relative;
+    background: #eee;
     border-radius: 40px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    /* Creating the "notch" effect with clip-path */
+    clip-path: polygon(0% 40%,
+            15% 40%,
+            15% 0%,
+            100% 0%,
+            100% 100%,
+            30% 100%,
+            30% 85%,
+            0% 85%);
 }
 
-.hero-image-masked {
+/* Let's try a better notched path that more closely matches the image */
+.hero-image-mask {
+    clip-path: path("M480 0H120C120 0 120 0 120 0V110C120 132.091 102.091 150 80 150H0V450C0 472.091 17.9086 490 40 490H380C380 490 380 490 380 490V390C380 367.909 397.909 350 420 350H500V20C500 8.9543 491.046 0 480 0Z");
+}
+
+/* Correction for scale since path is absolute */
+.hero-image-mask {
+    width: 500px;
+    height: 490px;
+    clip-path: path("M480 0H120C120 0 120 0 120 0V110C120 132.091 102.091 150 80 150H0V450C0 472.091 17.9086 490 40 490H380C380 490 380 490 380 490V390C380 367.909 397.909 350 420 350H500V20C500 8.9543 491.046 0 480 0Z");
+}
+
+.hero-image-main {
     width: 100%;
-    height: 500px;
+    height: 100%;
     object-fit: cover;
-    display: block;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-image-container:hover .hero-image-masked {
-    transform: scale(1.05);
 }
 
 /* Prep Strip */
@@ -336,19 +407,39 @@
 
 @media (max-width: 992px) {
     .hero-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-content {
         text-align: center;
     }
 
-    .hero-badge-icon {
-        position: relative;
-        right: auto;
-        display: block;
-        margin: 1rem auto;
+    .hero-title-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
-    .hero-subtitle {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle-container {
         margin: 0 auto 3rem;
+    }
+
+    .hero-image-wrapper {
+        justify-content: center;
+    }
+
+    .hero-image-mask {
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+        /* Revert to a simpler shape on mobile or scale the path */
+        clip-path: none;
+        border-radius: 40px;
     }
 
     .info-grid {

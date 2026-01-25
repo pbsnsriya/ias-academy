@@ -11,37 +11,56 @@ const Home = () => {
             <div className="home-page">
                 {/* Hero Section */}
                 <section className="hero-section">
+                    <div className="hero-grid-bg"></div>
                     <div className="container hero-container">
                         <div className="hero-content">
-                            <motion.h1
+                            <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6 }}
-                                className="hero-title"
+                                className="hero-title-wrapper"
                             >
-                                <motion.img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/256px-Emblem_of_India.svg.png"
-                                    alt="Badge"
-                                    className="hero-badge-icon"
-                                />
-                                India's Most <br />
-                                Affordable IAS <br />
-                                Training Academy
-                            </motion.h1>
+                                <h1 className="hero-title">
+                                    India's Most <br />
+                                    Affordable IAS <br />
+                                    Training Academy
+                                </h1>
+                                <div className="hero-circular-badge">
+                                    <svg viewBox="0 0 100 100" width="120" height="120">
+                                        <defs>
+                                            <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0 " />
+                                        </defs>
+                                        <g className="hero-badge-text">
+                                            <text fontSize="8.5" fontWeight="600" fill="currentColor">
+                                                <textPath xlinkHref="#circlePath">
+                                                    CONSISTENCY • EQUANIMITY • DISCIPLINE • DEDICATION •
+                                                </textPath>
+                                            </text>
+                                        </g>
+                                        <image
+                                            href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/256px-Emblem_of_India.svg.png"
+                                            x="40" y="40" width="50" height="50"
+                                        />
+                                    </svg>
+                                </div>
+                            </motion.div>
 
-                            <motion.p
+                            <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.2 }}
-                                className="hero-subtitle"
+                                className="hero-subtitle-container"
                             >
-                                For those who dream to becoming an IAS or IPS officers and serve the
-                                nation with integrity and courage, we offer a serious path forward.
-                                <br /><br />
-                                Our Vision is to nurture committed aspirants, so that in the next five years,
-                                100 IAS and 100 IPS officers take shape as a leader marked by competence,
-                                ethics, cultural sensitivity, patriotism and dedication towards public service
-                            </motion.p>
+                                <p className="hero-subtitle">
+                                    For those who dream to becoming an IAS or IPS officers and serve the
+                                    nation with integrity and courage, we offer a serious path forward.
+                                </p>
+                                <p className="hero-subtitle">
+                                    Our Vision is to nurture committed aspirants, so that in the next five years,
+                                    100 IAS and 100 IPS officers take shape as a leader marked by competence,
+                                    ethics, cultural sensitivity, patriotism and dedication towards public service
+                                </p>
+                            </motion.div>
 
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
@@ -49,7 +68,7 @@ const Home = () => {
                                 transition={{ duration: 0.6, delay: 0.4 }}
                                 className="hero-actions"
                             >
-                                <Link to="/contact" className="btn-primary-black">
+                                <Link to="/contact" className="btn-hero-pill">
                                     Contact Us <ArrowRight size={20} />
                                 </Link>
                             </motion.div>
@@ -58,9 +77,11 @@ const Home = () => {
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="hero-image-container"
+                            className="hero-image-wrapper"
                         >
-                            <img src="public/assets/images/optional.png" alt="IAS Academy Hero" className="hero-image-masked" />
+                            <div className="hero-image-mask">
+                                <img src="/assets/images/optional.png" alt="IAS Academy Hero" className="hero-image-main" />
+                            </div>
                         </motion.div>
                     </div>
                 </section>
@@ -170,7 +191,7 @@ const Home = () => {
                     <div className="container">
                         <h2 className="section-title-simple">Meet the team</h2>
                         <div className="team-featured-simple">
-                            <img src="public/assets/images/team.png" alt="The Team" />
+                            <img src="/assets/images/team.png" alt="The Team" />
                             <div className="team-quote-simple">
                                 <p>
                                     Our one-on-one sessions provide personalized mentorship tailored to each aspirant's
