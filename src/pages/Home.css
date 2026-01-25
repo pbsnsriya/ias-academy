@@ -66,8 +66,13 @@
 
 .hero-circular-badge {
     flex-shrink: 0;
-    animation: rotate 20s linear infinite;
     color: var(--text-main);
+    position: relative;
+}
+
+.hero-badge-text {
+    transform-origin: center;
+    animation: rotate 20s linear infinite;
 }
 
 @keyframes rotate {

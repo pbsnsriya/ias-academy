@@ -30,14 +30,16 @@ const Home = () => {
                                         <defs>
                                             <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0 " />
                                         </defs>
-                                        <text fontSize="8.5" fontWeight="600" fill="currentColor">
-                                            <textPath xlinkHref="#circlePath">
-                                                CONSISTENCY • EQUANIMITY • DISCIPLINE • DEDICATION •
-                                            </textPath>
-                                        </text>
+                                        <g className="hero-badge-text">
+                                            <text fontSize="8.5" fontWeight="600" fill="currentColor">
+                                                <textPath xlinkHref="#circlePath">
+                                                    CONSISTENCY • EQUANIMITY • DISCIPLINE • DEDICATION •
+                                                </textPath>
+                                            </text>
+                                        </g>
                                         <image
                                             href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/256px-Emblem_of_India.svg.png"
-                                            x="30" y="30" width="40" height="40"
+                                            x="40" y="40" width="50" height="50"
                                         />
                                     </svg>
                                 </div>
