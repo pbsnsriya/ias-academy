@@ -45,17 +45,16 @@ const Navbar = () => {
                     ))}
                 </div>
 
-                <div className="nav-actions">
+                <div className="nav-right">
                     <ThemeToggle />
                     <Link to="/contact" className="btn-touch">
                         Get in Touch <ArrowRight size={18} />
                     </Link>
+                    {/* Mobile Toggle */}
+                    <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
+                        {isOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
                 </div>
-
-                {/* Mobile Toggle */}
-                <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
-                    {isOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
 
                 {/* Mobile Menu */}
                 <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>

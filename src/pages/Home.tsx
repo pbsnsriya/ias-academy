@@ -19,16 +19,14 @@ const Home = () => {
                                 transition={{ duration: 0.6 }}
                                 className="hero-title"
                             >
-                                India's Most <br />
-                                Affordable IAS <br />
-                                Training Academy
                                 <motion.img
                                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/256px-Emblem_of_India.svg.png"
                                     alt="Badge"
                                     className="hero-badge-icon"
-                                    animate={{ rotate: 360 }}
-                                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                                 />
+                                India's Most <br />
+                                Affordable IAS <br />
+                                Training Academy
                             </motion.h1>
 
                             <motion.p
@@ -159,10 +157,8 @@ const Home = () => {
                             ].map(item => (
                                 <div key={item.id} className="live-item">
                                     <span className="item-id">{item.id}</span>
-                                    <div className="item-content">
-                                        <h4>{item.title}</h4>
-                                        <p>{item.desc}</p>
-                                    </div>
+                                    <h4 className="item-content-title">{item.title}</h4>
+                                    <p className="item-content-desc">{item.desc}</p>
                                 </div>
                             ))}
                         </div>

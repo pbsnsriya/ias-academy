@@ -15,12 +15,12 @@ import MentorshipListing from './pages/MentorshipListing';
 import MentorshipDetails from './pages/MentorshipDetails';
 import EssayListing from './pages/EssayListing';
 import EssayDetails from './pages/EssayDetails';
-
-
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />

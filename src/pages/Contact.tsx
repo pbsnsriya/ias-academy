@@ -19,11 +19,11 @@ const Contact = () => {
                                 <div className="form-grid">
                                     <div className="input-group">
                                         <label>Full name</label>
-                                        <input type="text" placeholder="Rahul" />
+                                        <input type="text" placeholder="name" />
                                     </div>
                                     <div className="input-group">
                                         <label>Email Address</label>
-                                        <input type="email" placeholder="rahul@gmail.com" />
+                                        <input type="email" placeholder="email@gmail.com" />
                                     </div>
                                     <div className="input-group">
                                         <label>Phone number</label>

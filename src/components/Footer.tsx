@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Dribbble, ArrowUpRight } from 'lucide-react';
+import { Linkedin, X, Dribbble, ArrowUpRight } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -36,7 +36,7 @@ const Footer = () => {
                         <p>Connect with us via our socials</p>
                         <div className="social-icons">
                             <a href="#" className="social-icon"><Linkedin size={20} /></a>
-                            <a href="#" className="social-icon"><Twitter size={20} /></a>
+                            <a href="#" className="social-icon"><X size={20} /></a>
                             <a href="#" className="social-icon"><Dribbble size={20} /></a>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <h1 className="bg-text">IAS ACADEMY</h1>
-                    <p className="copyright">© All Rights Reserved by Dr. Vivekananda IAS Academy - 2026</p>
+                    <p className="copyright">© All Right Reserved by Dr. Vivekananda IAS Academy - 2026</p>
                 </div>
             </div>
         </footer>

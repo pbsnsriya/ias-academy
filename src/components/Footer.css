@@ -1,31 +1,42 @@
 .footer {
-    background: var(--bg-card);
-    padding: 5rem 0 2rem;
-    border-radius: 40px 40px 0 0;
-    margin-top: 5rem;
+    background: #000;
+    padding: 6rem 0 3rem;
+    border-radius: 80px;
+    margin: 5rem 2rem 2rem;
+    color: #fff;
+}
+
+.footer .container {
+    max-width: 1200px;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 }
 
 .brand-title {
     font-size: 1rem;
-    margin-bottom: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    opacity: 0.9;
 }
 
 .cta-text {
-    font-size: 1.75rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
 }
 
 .sub-cta {
-    color: var(--text-muted);
-    margin-bottom: 2rem;
+    color: #94a3b8;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .footer-link-btn {
@@ -33,29 +44,46 @@
     align-items: center;
     gap: 0.5rem;
     font-weight: 600;
-    border-bottom: 1px solid white;
-    padding-bottom: 2px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 4px;
+    transition: var(--transition);
+    color: #fff;
+}
+
+.footer-link-btn:hover {
+    opacity: 0.8;
+    gap: 0.75rem;
 }
 
 .footer-links {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 .footer-links h4,
 .footer-social h4 {
     font-size: 1.1rem;
+    font-weight: 700;
     margin-bottom: 1.5rem;
+    color: #fff;
 }
 
 .footer-links a {
-    color: var(--text-muted);
+    color: #fff;
+    font-weight: 500;
+    opacity: 0.8;
 }
 
 .footer-links a:hover {
-    color: var(--text-main);
+    opacity: 1;
     padding-left: 5px;
+}
+
+.footer-social p {
+    color: #fff;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
 }
 
 .social-icons {
@@ -64,49 +92,99 @@
 }
 
 .social-icon {
-    width: 40px;
-    height: 40px;
-    background: var(--bg-hover);
+    width: 48px;
+    height: 48px;
+    background: #111;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+    color: #fff;
+}
+
+.social-icon:hover {
+    background: #222;
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer-bottom {
     text-align: center;
-    border-top: 1px solid var(--border);
-    padding-top: 4rem;
     position: relative;
+    padding: 8rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .bg-text {
-    font-size: 10vw;
-    font-weight: 800;
+    font-size: 11vw;
+    font-weight: 900;
     color: rgba(255, 255, 255, 0.03);
-    margin-bottom: -2rem;
+    /* More subtle as per latest image */
+    line-height: 1;
     letter-spacing: 0.5rem;
+    pointer-events: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+    margin: 0;
 }
 
 .copyright {
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    color: #64748b;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        margin: 4rem 1.5rem 1.5rem;
+        border-radius: 60px;
+    }
 }
 
 @media (max-width: 992px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        gap: 3rem;
+    }
+
+    .footer {
+        padding: 4rem 0 2rem;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
+    .footer {
+        margin: 3rem 1rem 1rem;
+        border-radius: 40px;
+        padding: 4rem 1.5rem 2rem;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .cta-text {
+        font-size: 1.8rem;
     }
 
     .bg-text {
-        font-size: 15vw;
+        font-size: 14vw;
+        letter-spacing: 0.4rem;
     }
 }
