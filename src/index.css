@@ -6,8 +6,19 @@
     --accent: #000000;
     --font-family: 'Outfit', sans-serif;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    /* Theme Variables - Fixed to Light */
+[data-theme='dark'] {
+    --bg-dark: #050505;
+    --bg-card: #0f0f0f;
+    --bg-hover: #1a1a1a;
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+    --border: rgba(255, 255, 255, 0.1);
+    --glass: rgba(15, 15, 15, 0.7);
+}
+
+[data-theme='light'] {
     --bg-dark: #ffffff;
     --bg-card: #ffffff;
     --bg-hover: #f1f5f9;
