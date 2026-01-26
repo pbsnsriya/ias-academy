@@ -44,6 +44,16 @@
     flex-direction: row-reverse;
 }
 
-.btn-back:hover {
-    transform: scale(1.05);
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 25vw;
+    }
+
+    .error-text {
+        font-size: 2rem;
+    }
+
+    .error-badge {
+        padding: 1rem 2rem;
+    }
 }

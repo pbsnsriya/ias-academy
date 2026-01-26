@@ -71,7 +71,7 @@
     top: 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .hero-circular-badge {
         position: static;
         transform: none;
@@ -178,7 +178,7 @@
     padding: 1.5rem 0;
     position: relative;
     z-index: 10;
-    margin-bottom: 30px;
+    margin-bottom: 5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -265,7 +265,7 @@
 /* Project List */
 /* Project List - Uses main theme background (usually light in light mode) */
 .project-section {
-    padding: 6rem 0;
+    padding: 0;
     background-color: var(--bg-dark);
 }
 
@@ -460,7 +460,7 @@
 }
 
 .about-image-main img {
-    width: 80% !important;
+    width: 90% !important;
     height: 100%;
     object-fit: cover;
     border-radius: 40px;
@@ -469,7 +469,7 @@
 .message-badge {
     position: absolute;
     bottom: 0 !important;
-    right: 10% !important;
+    right: 5% !important;
     background: white;
     color: black;
     padding: 1.5rem;
@@ -536,24 +536,17 @@
 }
 
 
-@media (max-width: 768px) {
-    .about-title {
-        font-size: 3rem;
-    }
-
-    .about-image-main {
-        height: 400px;
-    }
-
-    .message-badge {
-        bottom: 1rem;
-        right: 1rem;
-        left: 1rem;
-        padding: 1rem;
+@media (max-width: 1024px) {
+    .hero-circular-badge {
+        position: static;
+        transform: none;
+        margin-bottom: 1.5rem;
     }
 }
 
-@media (max-width: 992px) {
+/* ... existing code ... */
+
+@media (max-width: 1024px) {
     .hero-container {
         flex-direction: column;
         text-align: center;
@@ -602,19 +595,49 @@
     .project-grid-large {
         grid-template-columns: 1fr;
     }
+
+    .live-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
+    .about-title {
+        font-size: 3rem;
+    }
+
+    .about-image-main {
+        height: 400px;
+    }
+
+    .message-badge {
+        left: 30% !important;
+    }
+
     .hero-title {
         font-size: 3rem;
     }
 
     .dark-card {
-        padding: 2rem;
+        padding: 2rem !important;
     }
 
     .live-item {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .item-content-desc {
+        display: none;
+    }
+
+    .item-content-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .message-badge {
+        left: 5% !important;
     }
 }

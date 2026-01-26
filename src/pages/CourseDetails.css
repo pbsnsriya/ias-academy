@@ -112,7 +112,7 @@
     margin-bottom: 0.5rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .trending-grid {
         grid-template-columns: 1fr;
     }

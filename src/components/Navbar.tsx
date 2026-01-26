@@ -47,20 +47,20 @@ const Navbar = () => {
           ))}
         </div>
 
-        <Link to="/contact" className="btn-touch mobile-btn" onClick={() => setIsOpen(false)}>
+        <Link to="/contact" className="btn-touch" onClick={() => setIsOpen(false)}>
           <div className="btn-touch-transition">
             <span className='top-btn-touch'>Get in Touch</span>
             <span className='bottom-btn-touch'>Get in Touch</span>
-            <ArrowRight size={18} className='arrow-btn'/>
+            <ArrowRight size={18} className='arrow-btn' />
           </div>
         </Link>
 
-        <div className="nav-right">
-          {/* Mobile Toggle */}
-          <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+        {/* <div className="nav-right">
+          Mobile Toggle */}
+        <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+        {/* </div> */}
 
         {/* Mobile Menu */}
         <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
@@ -74,6 +74,10 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
+          <Link to="/contact" className="btn-touch mobile-btn" onClick={() => setIsOpen(false)}>
+            <span className=''>Get in Touch</span>
+            <ArrowRight size={18} />
+          </Link>
         </div>
       </div>
     </nav>
