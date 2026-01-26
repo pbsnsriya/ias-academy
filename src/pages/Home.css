@@ -16,22 +16,16 @@
 
 .hero-grid-bg {
     position: absolute;
-    top: 0;
+    top: 6%;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 40%;
+    height: 40%;
     background-image:
-        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+        linear-gradient(to right, rgba(37, 36, 36, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(37, 36, 36, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
     z-index: 1;
-}
-
-[data-theme='dark'] .hero-grid-bg {
-    background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
 .hero-container {
@@ -129,39 +123,53 @@
 }
 
 .hero-image-wrapper {
-    flex: 1;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    padding: 2em;
+    max-width: 450px;
 }
+
+.hero-director-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.hero-director-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-director-role {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.hero-director-creds {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
 
 .hero-image-mask {
     width: 100%;
-    max-width: 550px;
+    max-width: 500px;
     height: 550px;
     position: relative;
     border-radius: 40px;
     overflow: hidden;
-    /* Creating the "notch" effect with clip-path */
-    clip-path: polygon(0% 40%,
-            15% 40%,
-            15% 0%,
-            100% 0%,
-            100% 100%,
-            30% 100%,
-            30% 85%,
-            0% 85%);
-}
-
-/* Let's try a better notched path that more closely matches the image */
-.hero-image-mask {
-    /* clip-path: path("M480 0H120C120 0 120 0 120 0V110C120 132.091 102.091 150 80 150H0V450C0 472.091 17.9086 490 40 490H380C380 490 380 490 380 490V390C380 367.909 397.909 350 420 350H500V20C500 8.9543 491.046 0 480 0Z"); */
 }
 
 /* Correction for scale since path is absolute */
 .hero-image-mask {
     width: 70%;
     height: 10%;
-    /* clip-path: path("M480 0H120C120 0 120 0 120 0V110C120 132.091 102.091 150 80 150H0V450C0 472.091 17.9086 490 40 490H380C380 490 380 490 380 490V390C380 367.909 397.909 350 420 350H500V20C500 8.9543 491.046 0 480 0Z"); */
 }
 
 .hero-image-main {
@@ -668,22 +676,21 @@
     }
 
     .live-item {
+        display: flex;
         flex-direction: column;
         gap: 1rem;
     }
 
-    .item-content-desc {
-        display: none;
+    .playButton {
+        height: 40px;
+        width: 50px;
     }
 
-    .item-content-title {
-        text-align: center;
-    }
 }
 
 @media (max-width: 600px) {
     .message-badge {
-        left: 5% !important;
+        left: 25% !important;
     }
 }
 

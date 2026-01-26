@@ -6,10 +6,15 @@
     text-align: center;
 }
 
+.about-container {
+    padding: 0 !important;
+}
+
 .about-title {
     font-size: 4rem;
     font-weight: 800;
     margin-bottom: 3rem;
+    padding: 0 1.5rem;
 }
 
 .about-content {
@@ -22,6 +27,7 @@
     font-size: 1.1rem;
     color: var(--text-muted);
     line-height: 1.8;
+    padding: 0 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -175,4 +181,15 @@
     /* stroke stays black */
     fill: black;
     /* fill turns black */
+}
+
+@media (max-width: 768px) {
+    .playButton {
+        height: 40px;
+        width: 50px;
+    }
+
+    .message-badge {
+        left: 25% !important;
+    }
 }

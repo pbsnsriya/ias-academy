@@ -22,7 +22,7 @@ export const mentorshipCourses: CourseData[] = [
         date: 'To be announced soon',
         tests: '12 (8 Sectional, 4 Full length)',
         timings: 'Test: 2:30-5:30 PM (Sun) | Discussion: 6PM - 9PM (Sun)',
-        fee: 'Rs 13,000/-',
+        fee: 'To be announced',
         discount: 'Concessional fee of Rs 1000/- to students who appeared for Mains examination previously with Reflections IAS Academy',
         features: [
             'Only for Students Appearing Mains and only 50 Admissions',
@@ -36,7 +36,7 @@ export const mentorshipCourses: CourseData[] = [
             'A dedicated telegram group for sharing content related to current developments in Anthropology.',
             'Scientific Scheduling mindful of students learning abilities.'
         ],
-        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200'
+        image: '/assets/images/mentorship.png'
     },
     {
         id: 'parishrama',
@@ -45,7 +45,7 @@ export const mentorshipCourses: CourseData[] = [
         faculty: 'Dr G. Vivekananda',
         date: 'Batch 1: To be announced soon',
         duration: '6 months intensive training',
-        fee: 'Rs 12,000/-',
+        fee: 'To be announced',
         features: [
             'Daily PYQs plus FYQs Answer writing practice according to a fixed schedule with Evaluation.',
             'Forty five minutes, one on one Session, with Dr Vivekananda Sir in the beginning itself to identify past mistakes, strengths and accordingly design preparation.',
@@ -65,7 +65,7 @@ export const mentorshipCourses: CourseData[] = [
         date: 'To be announced soon',
         tests: '12 (8 Sectional, 4 Full length)',
         timings: 'Test: 2:30-5:30 PM (Sun) | Discussion: 6PM - 9PM (Sun)',
-        fee: 'Rs 13,000/-',
+        fee: 'To be announced',
         discount: 'Concessional fee of Rs 1000/- to students who appeared for Mains examination previously',
         features: [
             'Only for Students Appearing Mains and only 50 Admissions',
@@ -88,7 +88,7 @@ export const mentorshipCourses: CourseData[] = [
         faculty: 'Dr G. Vivekananda',
         date: 'Batch 1: To be announced soon',
         duration: '6 months intensive training',
-        fee: 'Rs 13,000/-',
+        fee: 'To be announced',
         features: [
             'Daily PYQs plus FYQs Answer writing practice according to a fixed schedule with Evaluation.',
             'Forty five minutes, one on one Session, with Dr Vivekananda Sir in the beginning itself to identify past mistakes, strengths and accordingly design preparation.',

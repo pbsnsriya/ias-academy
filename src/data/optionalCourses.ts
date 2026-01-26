@@ -20,7 +20,7 @@ export const optionalCourses: CourseData[] = [
         faculty: 'Dr Vivekananda',
         date: 'To be announced soon',
         duration: '250Hrs',
-        fee: 'Rs 30000/-',
+        fee: 'To be announced',
         discount: '10% discount for Women, SC and ST, EBC and Differently abled Aspirants',
         usps: [
             'Taught by faculty who cleared UPSC Civil Services examination',
@@ -38,7 +38,7 @@ export const optionalCourses: CourseData[] = [
             'Personal Mentorship by Dr Vivekananda and weekly monitoring of preparation progress.',
             'Direct access to faculty for doubts clearance.'
         ],
-        image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200'
+        image: '/assets/images/anthropology.png'
     },
     {
         id: 'sociology',
@@ -47,7 +47,7 @@ export const optionalCourses: CourseData[] = [
         faculty: 'Dr Vivekananda',
         date: 'To be announced soon',
         duration: '250Hrs',
-        fee: 'Rs 30000/-',
+        fee: 'To be announced',
         discount: '10% discount for Women, SC and ST, EBC and Differently abled Aspirants',
         usps: [
             'Taught by faculty who cleared UPSC Civil Services examination',
@@ -65,6 +65,6 @@ export const optionalCourses: CourseData[] = [
             'Personal Mentorship by Dr Vivekananda and weekly monitoring of preparation progress.',
             'Direct access to faculty for doubts clearance.'
         ],
-        image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200'
+        image: '/assets/images/sociology.png'
     }
 ];

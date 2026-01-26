@@ -19,7 +19,7 @@ export const essayCourses: EssayCourseData[] = [
         faculty: 'Dr Vivekananda',
         date: 'To be announced soon',
         tests: '10 Tests (8 Sectional + 2 Full length)',
-        fee: 'Rs 5,500/-',
+        fee: 'To be announced',
         usps: [
             'Unlike traditional way of giving a Structured Model answer, we will provide thinking line along with the requisite content to stimulate original thinking rather than micro managing.'
         ],
@@ -30,6 +30,6 @@ export const essayCourses: EssayCourseData[] = [
             'Test copy evaluation will be done with identification of specific deficiencies and motivating an aspirant to Improve Essay writing skills.',
             'A special high octane introductory session to expose the Aspirants to finer nuances of essay writing.'
         ],
-        image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200'
+        image: '/assets/images/essay-ethics.png'
     }
 ];

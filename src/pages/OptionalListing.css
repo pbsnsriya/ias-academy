@@ -2,14 +2,14 @@
     padding-top: 100px;
 }
 
-.section-title-large {
+.optional-page .section-title-large {
     font-size: 3.5rem;
     font-weight: 800;
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.section-subtitle-center {
+.optional-page .section-subtitle-center {
     text-align: center;
     color: var(--text-muted);
     max-width: 600px;
@@ -105,7 +105,7 @@
     font-weight: 800;
 }
 
-.btn-explore {
+.optional-page .btn-explore {
     background: white;
     color: black;
     padding: 0.75rem 1.5rem;
@@ -117,12 +117,12 @@
     transition: var(--transition);
 }
 
-[data-theme='light'] .btn-explore {
+[data-theme='light'] .optional-page .btn-explore {
     background: black;
     color: white;
 }
 
-.btn-explore:hover {
+.optional-page .btn-explore:hover {
     transform: translateX(5px);
 }
 

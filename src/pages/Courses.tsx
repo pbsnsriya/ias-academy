@@ -17,7 +17,7 @@ const Courses = () => {
             id: 'mentorship',
             title: 'Mentorship / Test series',
             duration: '',
-            image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=500',
+            image: '/assets/images/mentorship.png',
         },
         {
             id: 'value',
@@ -29,7 +29,13 @@ const Courses = () => {
             id: 'essay',
             title: 'Essay Ethics',
             duration: '12 min read',
-            image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=500',
+            image: '/assets/images/essay-ethics.png',
+        },
+        {
+            id: 'general',
+            title: 'General Studies',
+            duration: '',
+            image: '/assets/images/general-studies.png',
         }
     ];
 
@@ -59,9 +65,9 @@ const Courses = () => {
                                 );
                             })}
                         </div>
-                        <div className="load-more-container">
+                        {courses.length > 6 && <div className="load-more-container">
                             <button className="btn-load-more">Load More</button>
-                        </div>
+                        </div>}
                     </div>
                 </section>
             </div>

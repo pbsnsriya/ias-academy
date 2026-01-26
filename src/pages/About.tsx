@@ -9,7 +9,7 @@ const About = () => {
         <Layout>
             <div className="about-page">
                 <section className="about-hero">
-                    <div className="container">
+                    <div className="container about-container">
                         <motion.h1
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ const About = () => {
                             transition={{ delay: 0.4 }}
                             className="about-image-main"
                         >
-                            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200" alt="Large crowd" />
+                            <img src="/assets/images/seminar-hall.png" alt="Classroom Session" />
                             <div className="message-badge">
                                 {/* <img src="" alt="Dr Vivekananda" /> */}
                                 <div className="playButton">

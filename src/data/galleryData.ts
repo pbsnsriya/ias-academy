@@ -44,8 +44,8 @@ export const galleryData: GalleryItem[] = [
     },
     {
         id: '7',
-        image: '/assets/gallery/WhatsApp Image 2026-01-24 at 14.24.53.jpeg',
-        desc: 'Academy Event',
+        image: '/assets/gallery/With Mr Shashikanth Korravath IRS.jpeg',
+        desc: 'With Mr Shashikanth Korravath IRS',
         tag: 'Public Events'
     }
 ];

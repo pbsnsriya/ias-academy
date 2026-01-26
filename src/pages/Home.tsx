@@ -76,9 +76,18 @@ const Home = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                             className="hero-image-wrapper"
+                            onClick={() => {
+                                window.open('https://www.linkedin.com/in/vivekananda-gadiyaram-990227ab', '_blank');
+                            }}
                         >
                             <div className="hero-image-mask">
-                                <img src="/assets/images/director.png" alt="IAS Academy Hero" className="hero-image-main" />
+                                <img src="/assets/images/director.png" alt="IAS Academy Architecture" className="hero-image-main" />
+                            </div>
+                            <div className="hero-director-info glass-card-small">
+                                <h3 className='hero-director-name'>Dr. Vivekananda Gadiyaram</h3>
+                                <p className="hero-director-role">Founder, Dr. Vivekananda's IAS Academy</p>
+                                <p className="hero-director-creds">"India needs civil servants who combine intellectual excellence with integrity,
+                                    empathy, and an unwavering commitment to public service."</p>
                             </div>
                         </motion.div>
                     </div>
@@ -106,7 +115,7 @@ const Home = () => {
                     transition={{ delay: 0.4 }}
                     className="about-image-main"
                 >
-                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200" alt="Large crowd" />
+                    <img src="/assets/images/seminar-hall.png" alt="Classroom Session" />
                     <div className="message-badge">
                         {/* <img src="" alt="Dr Vivekananda" /> */}
                         <div className="playButton">
@@ -127,13 +136,13 @@ const Home = () => {
                         </div>
                         <div className="live-list">
                             {[
-                                { id: '01', imgSrc: "assets/images/director2.jpeg", link: "/gallery", state: { filter: 'Toppers' }, title: 'Our Toppers', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
-                                { id: '02', imgSrc: "assets/images/director2.jpeg", link: "/gallery", state: { filter: 'Public Events' }, title: 'Public Events', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
-                                { id: '03', imgSrc: "assets/images/director2.jpeg", link: "/gallery", state: { filter: 'Podcasts' }, title: 'Podcasts', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
-                                { id: '04', imgSrc: "assets/images/director2.jpeg", link: "/gallery", state: { filter: 'Seminars' }, title: 'Seminars', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
+                                { id: '01', imgSrc: "/assets/images/lbsnaa-gate.png", link: "/gallery", state: { filter: 'Toppers' }, title: 'Our Toppers', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
+                                { id: '02', imgSrc: "/assets/images/ips-training.png", link: "/gallery", state: { filter: 'Public Events' }, title: 'Public Events', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
+                                { id: '03', imgSrc: "/assets/images/podcast-studio.png", link: "/gallery", state: { filter: 'Podcasts' }, title: 'Podcasts', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
+                                { id: '04', imgSrc: "/assets/images/seminar-hall.png", link: "/gallery", state: { filter: 'Seminars' }, title: 'Seminars', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
                             ].map(item => (
                                 <NavLink key={item.id} to={item.link} state={item.state} className="live-item">
-                                    <img src={item.imgSrc} alt="Director" className='gallery-image' />
+                                    <img src={item.imgSrc} alt={item.title} className='gallery-image' />
                                     <div className='flex'>
                                         <h4 className="item-content-title">{item.title}</h4>
                                         <p className="item-content-desc">{item.desc}</p>
@@ -153,10 +162,10 @@ const Home = () => {
 
                         <div className="project-grid-large">
                             {[
-                                { id: '01', imgSrc: "assets/images/director2.jpeg", link: "/director", title: 'Our Director', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
-                                { id: '02', imgSrc: "assets/images/director2.jpeg", link: "/courses", title: 'Our Courses', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
-                                { id: '03', imgSrc: "assets/images/director2.jpeg", link: "/tesimonials", title: 'Our Testimonials', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
-                                { id: '04', imgSrc: "assets/images/director2.jpeg", link: "/accolades", title: 'Our Accolades', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
+                                { id: '01', imgSrc: "/assets/images/director2.jpeg", link: "/director", title: 'Our Director', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
+                                { id: '02', imgSrc: "/assets/images/courses-collage.png", link: "/courses", title: 'Our Courses', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
+                                { id: '03', imgSrc: "/assets/images/lbsnaa-gate.png", link: "/testimonials", title: 'Our Testimonials', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
+                                { id: '04', imgSrc: "/assets/images/academy-hero.png", link: "/accolades", title: 'Our Accolades', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
                             ].map(item => (
                                 <NavLink key={item.id} to={item.link} className="project-card-large">
                                     {/* <span className="item-id">{item.id}</span> */}
