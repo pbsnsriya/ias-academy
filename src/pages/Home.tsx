@@ -177,37 +177,6 @@ const Home = () => {
                                 </NavLink>
                             ))}
                         </div>
-
-                        {/* <div className="project-grid-large">
-                            <div className="project-card-large">
-                                <img src="assets/images/director2.jpeg" alt="Director" />
-                                <div className="project-content">
-                                    <span className="project-label">Our Director</span>
-                                    <h4>Our Director</h4>
-                                </div>
-                            </div>
-                            <div className="project-card-large">
-                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600" alt="Courses" />
-                                <div className="project-content">
-                                    <span className="project-label">Our Matches</span>
-                                    <h4>Our Courses</h4>
-                                </div>
-                            </div>
-                            <div className="project-card-large">
-                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600" alt="Testimonials" />
-                                <div className="project-content">
-                                    <span className="project-label">Our Testimonials</span>
-                                    <h4>Our Testimonials</h4>
-                                </div>
-                            </div>
-                            <div className="project-card-large">
-                                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600" alt="Accolades" />
-                                <div className="project-content">
-                                    <span className="project-label">Our Accolades</span>
-                                    <h4>Our Accolades</h4>
-                                </div>
-                            </div>
-                        </div> */}
                     </div>
                 </section>
 

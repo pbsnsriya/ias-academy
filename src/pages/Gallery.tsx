@@ -27,11 +27,9 @@ const Gallery = ({ defaultFilter = 'All' }: GalleryProps) => {
     return (
         <Layout>
             <div className="gallery-page">
-                <div className="gallery-header-bg">
-                    <div className="container">
-                        <div className="header-content">
-                            <h1 className="gallery-title">Gallery</h1>
-                        </div>
+                <div className="container">
+                    <div className="header-content">
+                        <h1 className="gallery-title">Our Gallery</h1>
                     </div>
                 </div>
 

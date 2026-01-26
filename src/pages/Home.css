@@ -323,6 +323,13 @@
     gap: 3rem;
 }
 
+.project-card-large {
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    padding: 20px;
+}
+
 .project-card-large img {
     width: 100%;
     height: 350px;
@@ -686,6 +693,14 @@
         width: 50px;
     }
 
+    .section-title-simple {
+        font-size: 2.5rem;
+    }
+
+    .section-header-left {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
 }
 
 @media (max-width: 600px) {

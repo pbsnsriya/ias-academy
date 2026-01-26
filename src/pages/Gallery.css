@@ -1,12 +1,9 @@
 .gallery-page {
     min-height: 100vh;
-    padding-top: 0;
+    padding-top: 120px;
 }
 
-/* Header Section with Background */
 .gallery-header-bg {
-    background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000') center/cover no-repeat;
-    /* Generic office/professional bg */
     position: relative;
     padding: 120px 0 60px;
     margin-bottom: 4rem;
@@ -26,7 +23,7 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .gallery-title {
