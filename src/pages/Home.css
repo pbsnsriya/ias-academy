@@ -34,6 +34,7 @@
     justify-content: space-between;
     position: relative;
     z-index: 2;
+    gap: 3rem;
 }
 
 .hero-content {
@@ -63,6 +64,10 @@
     position: absolute;
     left: 50%;
     top: 0;
+}
+
+.hero-actions {
+    width: fit-content;
 }
 
 @media (max-width: 1024px) {
@@ -608,7 +613,16 @@
     }
 }
 
-/* ... existing code ... */
+@media (max-width: 1360px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .hero-circular-badge {
+        top: -3%;
+        left: 40%
+    }
+}
 
 @media (max-width: 1024px) {
     .hero-container {
@@ -641,8 +655,7 @@
     .hero-image-mask {
         width: 100%;
         max-width: 400px;
-        height: 400px;
-        /* Revert to a simpler shape on mobile or scale the path */
+        height: 550px;
         clip-path: none;
         border-radius: 40px;
     }

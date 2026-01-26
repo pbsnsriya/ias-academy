@@ -29,6 +29,9 @@
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    background: black;
+    padding: 2rem;
+    border-radius: 40px;
 }
 
 .course-card-alt {
