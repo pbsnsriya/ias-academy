@@ -24,39 +24,115 @@
     line-height: 1.8;
 }
 
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 3rem;
+    }
+
+    .about-image-main {
+        height: 400px;
+    }
+
+    .message-badge {
+        left: 30% !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .message-badge {
+        left: 20% !important;
+    }
+}
+
 .about-image-main {
     position: relative;
     border-radius: 40px;
     overflow: hidden;
     height: 600px;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 .about-image-main img {
-    width: 100%;
+    width: 90% !important;
     height: 100%;
     object-fit: cover;
+    border-radius: 40px;
 }
 
-.message-badge {
+/* .message-badge {
     position: absolute;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 0 !important;
+    right: 5% !important;
     background: white;
     color: black;
     padding: 1.5rem;
-    border-radius: 20px;
+    border-radius: 40px 0 0 0 !important;
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: left;
 }
 
 .message-badge img {
-    width: 60px;
+    width: 60px !important;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 40px 0 0 0;
     object-fit: cover;
+} */
+
+.message-badge {
+    position: absolute;
+    bottom: 0 !important;
+    right: 5% !important;
+
+    background: white;
+    color: black;
+    padding: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+
+    border-radius: 40px 0 0 0 !important;
+    overflow: visible;
+    /* 🔑 required */
+
+    z-index: 10;
+}
+
+.message-badge::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+
+    width: 40px;
+    height: 40px;
+
+    background: radial-gradient(circle at top left, transparent 40px, white 40px) !important;
+}
+
+.message-badge::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 0px;
+
+    width: 40px;
+    height: 40px;
+
+    background: radial-gradient(circle at top left, transparent 40px, white 40px) !important;
+}
+
+.message-badge img {
+    width: 60px !important;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 40px 0 0 0 !important;
+    flex-shrink: 0;
 }
 
 .message-badge h4 {
@@ -69,19 +145,34 @@
     color: #666;
 }
 
-@media (max-width: 768px) {
-    .about-title {
-        font-size: 3rem;
-    }
+.playButton {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: black;
 
-    .about-image-main {
-        height: 400px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .message-badge {
-        bottom: 1rem;
-        right: 1rem;
-        left: 1rem;
-        padding: 1rem;
-    }
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.icon {
+    color: white;
+    fill: white;
+    transition: color 0.25s ease, fill 0.25s ease;
+}
+
+/* Hover state */
+.playButton:hover {
+    background-color: greenyellow;
+}
+
+.playButton:hover .icon {
+    color: black;
+    /* stroke stays black */
+    fill: black;
+    /* fill turns black */
 }

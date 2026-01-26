@@ -16,6 +16,7 @@ import MentorshipDetails from './pages/MentorshipDetails';
 import EssayListing from './pages/EssayListing';
 import EssayDetails from './pages/EssayDetails';
 import ScrollToTop from './components/ScrollToTop';
+import Gallery from './pages/Gallery';
 
 function App() {
     return (
@@ -36,6 +37,7 @@ function App() {
                 <Route path="/courses/:id" element={<CourseDetails />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/director" element={<Director />} />
+                <Route path="/gallery" element={<Gallery />} />
                 <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>

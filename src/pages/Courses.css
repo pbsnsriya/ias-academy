@@ -47,8 +47,9 @@
     transition: var(--transition);
 }
 
-.course-card-alt:first-child .course-img-wrap {
+.course-card-alt:hover .course-img-wrap {
     border-color: #a5b4fc;
+    transform: scale(1.03);
 }
 
 .course-img-wrap img {

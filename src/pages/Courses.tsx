@@ -12,7 +12,6 @@ const Courses = () => {
             title: 'Optionals',
             duration: '4 months',
             image: '/assets/images/optional.png',
-            badge: 'Course Title'
         },
         {
             id: 'mentorship',
@@ -49,7 +48,6 @@ const Courses = () => {
 
                                 return (
                                     <Link to={linkPath} key={index} className="course-card-alt">
-                                        {course.badge && <span className="course-badge-overlay"><BookOpen size={16} /> {course.badge}</span>}
                                         <div className="course-img-wrap">
                                             <img src={course.image} alt={course.title} />
                                         </div>

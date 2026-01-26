@@ -2,6 +2,7 @@
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import './About.css';
+import { Play } from 'lucide-react';
 
 const About = () => {
     return (
@@ -47,7 +48,10 @@ const About = () => {
                         >
                             <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200" alt="Large crowd" />
                             <div className="message-badge">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100" alt="Dr Vivekananda" />
+                                {/* <img src="" alt="Dr Vivekananda" /> */}
+                                <div className="playButton">
+                                    <Play size={20} className="icon" />
+                                </div>
                                 <div>
                                     <h4>Message from Dr. Vivekananda</h4>
                                     <p>Founder of Dr. Vivekananda IAS Academy</p>

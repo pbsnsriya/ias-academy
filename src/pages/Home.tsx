@@ -66,7 +66,7 @@ const Home = () => {
                                 transition={{ duration: 0.6, delay: 0.4 }}
                                 className="hero-actions"
                             >
-                                <Link to="/contact" className="btn-hero-pill">
+                                <Link to="https://cal.com/nanda-kishore-jvcbgm/30min" target="_blank" className="btn-hero-pill">
                                     Talk to Us <ArrowRight size={20} />
                                 </Link>
                             </motion.div>
@@ -86,10 +86,15 @@ const Home = () => {
 
                 {/* Preparation Strip */}
                 <div className="prep-strip">
-                    <div className="container prep-container">
-                        {['Consistency', 'Equanimity', 'Grit', 'Discipline', 'Unwavering focus', 'Dedication'].map((item) => (
-                            <div key={item} className="prep-item">
-                                <span>{item}</span>
+                    <div className="prep-track">
+                        {[...Array(3)].map((_, i) => (
+                            <div key={i} className="prep-content">
+                                {['Consistency', 'Equanimity', 'Grit', 'Discipline', 'Unwavering focus', 'Dedication'].map((item) => (
+                                    <div key={item} className="prep-item">
+                                        <span>{item}</span>
+                                        <span className="prep-item-divider">✦</span>
+                                    </div>
+                                ))}
                             </div>
                         ))}
                     </div>
@@ -122,12 +127,12 @@ const Home = () => {
                         </div>
                         <div className="live-list">
                             {[
-                                { id: '01', imgSrc: "assets/images/director2.jpeg", link: "/gallery/toppers", title: 'Our Toppers', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
-                                { id: '02', imgSrc: "assets/images/director2.jpeg", link: "/gallery/events", title: 'Public Events', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
-                                { id: '03', imgSrc: "assets/images/director2.jpeg", link: "/podcasts", title: 'Podcasts', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
-                                { id: '04', imgSrc: "assets/images/director2.jpeg", link: "/seminars", title: 'Seminars', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
+                                { id: '01', imgSrc: "assets/images/director2.jpeg", link: "/gallery", state: { filter: 'Toppers' }, title: 'Our Toppers', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
+                                { id: '02', imgSrc: "assets/images/director2.jpeg", link: "/gallery", state: { filter: 'Public Events' }, title: 'Public Events', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
+                                { id: '03', imgSrc: "assets/images/director2.jpeg", link: "/gallery", state: { filter: 'Podcasts' }, title: 'Podcasts', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
+                                { id: '04', imgSrc: "assets/images/director2.jpeg", link: "/gallery", state: { filter: 'Seminars' }, title: 'Seminars', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
                             ].map(item => (
-                                <NavLink key={item.id} to={item.link} className="live-item">
+                                <NavLink key={item.id} to={item.link} state={item.state} className="live-item">
                                     <img src={item.imgSrc} alt="Director" className='gallery-image' />
                                     <div className='flex'>
                                         <h4 className="item-content-title">{item.title}</h4>
@@ -153,7 +158,7 @@ const Home = () => {
                                 { id: '03', imgSrc: "assets/images/director2.jpeg", link: "/tesimonials", title: 'Our Testimonials', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
                                 { id: '04', imgSrc: "assets/images/director2.jpeg", link: "/accolades", title: 'Our Accolades', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
                             ].map(item => (
-                                <NavLink key={item.id} to={item.link}className="project-card-large">
+                                <NavLink key={item.id} to={item.link} className="project-card-large">
                                     {/* <span className="item-id">{item.id}</span> */}
                                     <img src={item.imgSrc} alt="Director" />
                                     <div className="project-content">
@@ -196,6 +201,18 @@ const Home = () => {
                         </div> */}
                     </div>
                 </section>
+
+                {/* Work Together Marquee */}
+                <div className="work-together-strip">
+                    <div className="work-track">
+                        {[...Array(6)].map((_, i) => (
+                            <div key={i} className="work-content">
+                                <span className="work-text">Let's Work Together </span>
+                                <span className="work-divider">✦</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </Layout>
     );

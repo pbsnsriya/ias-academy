@@ -12,7 +12,7 @@ const Footer = () => {
                         <h3 className="brand-title">Dr Vivek IAS Academy</h3>
                         <p className="cta-text">Do you like what you see?</p>
                         <p className="sub-cta">Let's build the future IAS.</p>
-                        <Link to="/contact" className="footer-link-btn">
+                        <Link to="https://cal.com/nanda-kishore-jvcbgm/30min" target="_blank" className="footer-link-btn">
                             Let's Talk with Us <ArrowUpRight size={18} />
                         </Link>
                     </div>
