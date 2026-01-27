@@ -14,7 +14,7 @@ const Director = () => {
                         <p className="director-subtitle">"Preparing civil servants who place the nation above self."</p>
 
                         <div className="director-main-img-container">
-                            <img src="assets/images/director.png" alt="Dr. Vivekananda Gadiyaram" className="director-main-img" />
+                            <img src="/assets/images/director.png" alt="Dr. Vivekananda Gadiyaram" className="director-main-img" />
                         </div>
 
                         <div className="director-stats-grid">

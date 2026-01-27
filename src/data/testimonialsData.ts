@@ -13,7 +13,7 @@ export const testimonials: Testimonial[] = [
         name: 'Banna Venkatesh',
         role: 'AIR-15 IAS (Under Trainee)',
         image: '/assets/gallery/With Banna Venkatesh AIR-15 IAS (Under Trainee).jpeg',
-        quote: "Dr. Vivekananda Sir's guidance was pivotal in my journey. His anthropology classes gave me the conceptual clarity I needed to score high.",
+        quote: "Dr. Vivekananda sir’s guidance was pivotal in my journey. His anthropology classes gave me the conceptual clarity I needed to score high.",
         videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' // Placeholder
     },
     {

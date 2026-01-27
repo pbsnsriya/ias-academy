@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, ArrowRight } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -28,7 +27,8 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <Link to="/" className="logo">
-          Dr Vivekananda’s IAS Academy
+          <img src="/assets/images/logo.jpeg" alt="Logo" />
+          <span>Dr Vivekananda’s IAS Academy</span>
         </Link>
 
         {/* Desktop Navigation */}

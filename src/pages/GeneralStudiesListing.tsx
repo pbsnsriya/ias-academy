@@ -6,28 +6,28 @@ import './Courses.css';
 const Courses = () => {
     const courses = [
         {
-            id: 'optional-classes',
-            title: 'Optional Classes',
-            duration: '',
-            image: '/assets/images/optional.png',
-        },
-        {
-            id: 'optional-mentorship',
-            title: 'Optional Mentorship',
+            id: 'mentorship',
+            title: 'Mentorship / Test series',
             duration: '',
             image: '/assets/images/mentorship.png',
         },
         {
-            id: 'general',
-            title: 'General Studies',
+            id: 'ethics',
+            title: 'Ethics',
             duration: '',
-            image: '/assets/images/general-studies.png',
+            image: '/assets/images/ethics-integrity.png',
         },
         {
-            id: 'tgpsc/appsc',
-            title: 'TGPSC / APPSC',
+            id: 'essay',
+            title: 'Essay',
             duration: '',
-            image: '/assets/images/tgpsc-appsc-category.png',
+            image: '/assets/images/essay-coaching.png',
+        },
+        {
+            id: 'value-addition',
+            title: 'Value Addition',
+            duration: '',
+            image: '/assets/images/value-addition.png',
         }
     ];
 
@@ -37,13 +37,13 @@ const Courses = () => {
                 <section className="courses-hero">
                     <div className="courses-container container">
                         <h1 className="section-title-large">The latest courses from us.</h1>
-                        <div className="courses-grid">
+                        <div className={`courses-grid ${courses.length === 1 ? 'single-item' : ''}`}>
                             {courses.map((course, index) => {
                                 let linkPath = `/courses/${course.id}`; // Default
-                                if (course.title === 'Optional Classes') linkPath = '/courses/optional-classes';
-                                if (course.title === 'Optional Mentorship') linkPath = '/courses/optional-mentorship';
-                                if (course.title === 'General Studies') linkPath = '/courses/general-studies';
-                                if (course.title === 'TGPSC / APPSC') linkPath = '/courses/tgpsc-appsc';
+                                if (course.title === 'Mentorship / Test series') linkPath = '/courses/general-studies/mentorship';
+                                if (course.title === 'Essay') linkPath = '/courses/general-studies/essay';
+                                if (course.title === 'Ethics') linkPath = '/courses/general-studies/ethics';
+                                if (course.title === 'Value Addition') linkPath = '/courses/general-studies/value-addition';
 
                                 return (
                                     <Link to={linkPath} key={index} className="course-card-alt">

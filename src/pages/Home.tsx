@@ -21,7 +21,7 @@ const Home = () => {
                                 className="hero-title-wrapper"
                             >
                                 <h1 className="hero-title">
-                                    India's Most <br />
+                                    India’s Most <br />
                                     Affordable IAS <br />
                                     Training Academy
                                 </h1>
@@ -30,11 +30,14 @@ const Home = () => {
                                         <defs>
                                             <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0 " />
                                         </defs>
-                                        <text fontSize="8.5" fontWeight="600" fill="currentColor" className='badge-text-rotate'>
-                                            <textPath xlinkHref="#circlePath">
-                                                CONSISTENCY • EQUANIMITY • DISCIPLINE • DEDICATION •
-                                            </textPath>
-                                        </text>
+                                        <g className="badge-text-rotate">
+                                            <text fontSize="8.5" fontWeight="600" fill="currentColor">
+                                                <textPath href="#circlePath">
+                                                    CONSISTENCY • EQUANIMITY • DISCIPLINE • DEDICATION •
+                                                </textPath>
+                                            </text>
+                                        </g>
+
                                         <image
                                             href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/256px-Emblem_of_India.svg.png"
                                             x="25" y="25" width="50" height="50"
@@ -85,7 +88,7 @@ const Home = () => {
                             </div>
                             <div className="hero-director-info glass-card-small">
                                 <h3 className='hero-director-name'>Dr. Vivekananda Gadiyaram</h3>
-                                <p className="hero-director-role">Founder, Dr. Vivekananda's IAS Academy</p>
+                                <p className="hero-director-role">Founder, Dr. Vivekananda’s IAS Academy</p>
                                 <p className="hero-director-creds">"India needs civil servants who combine intellectual excellence with integrity,
                                     empathy, and an unwavering commitment to public service."</p>
                             </div>
@@ -123,7 +126,7 @@ const Home = () => {
                         </div>
                         <div>
                             <h4>Message from Dr. Vivekananda</h4>
-                            <p>Founder of Dr. Vivekananda IAS Academy</p>
+                            <p>Founder of Dr. Vivekananda’s IAS Academy</p>
                         </div>
                     </div>
                 </motion.div>
@@ -136,10 +139,10 @@ const Home = () => {
                         </div>
                         <div className="live-list">
                             {[
-                                { id: '01', imgSrc: "/assets/images/lbsnaa-gate.png", link: "/gallery", state: { filter: 'Toppers' }, title: 'Our Toppers', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
-                                { id: '02', imgSrc: "/assets/images/ips-training.png", link: "/gallery", state: { filter: 'Public Events' }, title: 'Public Events', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
-                                { id: '03', imgSrc: "/assets/images/podcast-studio.png", link: "/gallery", state: { filter: 'Podcasts' }, title: 'Podcasts', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
-                                { id: '04', imgSrc: "/assets/images/seminar-hall.png", link: "/gallery", state: { filter: 'Seminars' }, title: 'Seminars', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
+                                { id: '01', imgSrc: "/assets/images/lbsnaa-gate.png", link: "/gallery", state: { filter: 'Toppers' }, title: 'Our Toppers', desc: 'Celebrating the triumph of determination—meet our students who conquered the Civil Services with flying colors.' },
+                                { id: '02', imgSrc: "/assets/images/ips-training.png", link: "/gallery", state: { filter: 'Public Events' }, title: 'Public Events', desc: 'Witness our engagement with the Civil Services community and experts, fostering a spirit of service and awareness.' },
+                                { id: '03', imgSrc: "/assets/images/podcast-studio.png", link: "/gallery", state: { filter: 'Podcasts' }, title: 'Podcasts', desc: 'Insightful discussions on preparation strategy, current affairs, and the journey of civil service aspirants.' },
+                                { id: '04', imgSrc: "/assets/images/seminar-hall.png", link: "/gallery", state: { filter: 'Seminars' }, title: 'Seminars', desc: 'Intensive sessions and workshops designed to deepen understanding and enhance analytical skills.' }
                             ].map(item => (
                                 <NavLink key={item.id} to={item.link} state={item.state} className="live-item">
                                     <img src={item.imgSrc} alt={item.title} className='gallery-image' />
@@ -153,26 +156,26 @@ const Home = () => {
                     </div>
                 </section>
 
-                {/* More about us / Project List */}
-                <section className="project-section">
-                    <div className="container">
+                {/* More about us / more-about-us List */}
+                <section className="more-about-us-section">
+                    <div className="more-about-us-container container">
                         <div className="section-header-left">
                             <h2 className="section-title-simple">More about us</h2>
                         </div>
 
-                        <div className="project-grid-large">
+                        <div className="more-about-us-grid-large">
                             {[
-                                { id: '01', imgSrc: "/assets/images/director2.jpeg", link: "/director", title: 'Our Director', desc: 'We Connect with students directly and facilitate dynamic discussions, questions, and collaborative activities.' },
-                                { id: '02', imgSrc: "/assets/images/courses-collage.png", link: "/courses", title: 'Our Courses', desc: 'record live sessions and if you miss or want to revisit key points, you can easily access recordings within the course platform.' },
-                                { id: '03', imgSrc: "/assets/images/lbsnaa-gate.png", link: "/testimonials", title: 'Our Testimonials', desc: 'We conduct quizzes to solicit student opinions and then use their responses as a springboard for discussion or clarification.' },
-                                { id: '04', imgSrc: "/assets/images/academy-hero.png", link: "/accolades", title: 'Our Accolades', desc: 'We have students work in groups to conduct on-the-spot research, generate arguments for and against the statement, and formulate their own perspective.' }
+                                { id: '01', imgSrc: "/assets/images/director2.jpeg", link: "/director", title: 'Our Director', desc: 'Guided by Dr. Vivekananda’s vision to mold aspirants into competent, ethical, and patriotic leaders for the nation.' },
+                                { id: '02', imgSrc: "/assets/images/courses-collage.png", link: "/courses", title: 'Our Courses', desc: 'Holistic preparation strategies including affordable coaching, personal mentorship, and rigorous testing modules.' },
+                                { id: '03', imgSrc: "/assets/images/lbsnaa-gate.png", link: "/testimonials", title: 'Our Testimonials', desc: 'Discover how our focused approach and disciplined environment have helped students achieve their IAS/IPS dreams.' },
+                                { id: '04', imgSrc: "/assets/images/academy-hero.png", link: "/accolades", title: 'Our Accolades', desc: 'Celebrating our legacy of excellence and the consistent success of our students in the Civil Services Examination.' }
                             ].map(item => (
-                                <NavLink key={item.id} to={item.link} className="project-card-large">
+                                <NavLink key={item.id} to={item.link} className="more-about-us-card-large">
                                     {/* <span className="item-id">{item.id}</span> */}
                                     <img src={item.imgSrc} alt="Director" />
-                                    <div className="project-content">
-                                        <h4>{item.title}</h4>
-                                        <p className="project-label">{item.desc}</p>
+                                    <div className="more-about-us-content">
+                                        <h4 className='more-about-us-title'>{item.title}</h4>
+                                        <p className="more-about-us-label">{item.desc}</p>
                                     </div>
                                 </NavLink>
                             ))}

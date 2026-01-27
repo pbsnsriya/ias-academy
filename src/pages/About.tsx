@@ -54,7 +54,7 @@ const About = () => {
                                 </div>
                                 <div>
                                     <h4>Message from Dr. Vivekananda</h4>
-                                    <p>Founder of Dr. Vivekananda IAS Academy</p>
+                                    <p>Founder of Dr. Vivekananda’s IAS Academy</p>
                                 </div>
                             </div>
                         </motion.div>

@@ -16,7 +16,7 @@ export const essayCourses: EssayCourseData[] = [
         id: 'deeksha',
         title: 'Deeksha',
         subtitle: 'Essay Writing Module',
-        faculty: 'Dr Vivekananda',
+        faculty: 'Dr G. Vivekananda',
         date: 'To be announced soon',
         tests: '10 Tests (8 Sectional + 2 Full length)',
         fee: 'To be announced',

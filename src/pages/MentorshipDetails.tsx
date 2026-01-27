@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 import { useParams, Navigate } from 'react-router-dom';
 import { mentorshipCourses } from '../data/mentorshipCourses';
 import { Check, Clock, Calendar, User, CreditCard, BookOpen } from 'lucide-react';
-import './OptionalDetails.css'; // Reusing styles
+import './OptionalClassesDetails.css'; // Reusing styles
 
 const MentorshipDetails = () => {
     const { id } = useParams<{ id: string }>();
@@ -61,7 +61,7 @@ const MentorshipDetails = () => {
                                     <CreditCard size={24} />
                                     <span className="fee-amount">{course.fee}</span>
                                 </div>
-                                {course.discount && <p className="discount-text">{course.discount}</p>}
+                                {/* {course.discount && <p className="discount-text">{course.discount}</p>} */}
                                 <div className="sidebar-action">
                                     <button className="btn-enroll-now">Enroll Now</button>
                                 </div>

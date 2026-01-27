@@ -40,7 +40,7 @@ const Contact = () => {
                                 </div>
                                 <div className="input-group full-width">
                                     <label>Type your message</label>
-                                    <textarea placeholder="Tell us about your project"></textarea>
+                                    <textarea placeholder="Tell us about your queries"></textarea>
                                 </div>
                                 <button type="submit" className="btn-send">
                                     Send Message

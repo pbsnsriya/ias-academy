@@ -188,7 +188,9 @@
         height: 40px;
         width: 50px;
     }
+}
 
+@media (max-width: 600px) {
     .message-badge {
         left: 25% !important;
     }

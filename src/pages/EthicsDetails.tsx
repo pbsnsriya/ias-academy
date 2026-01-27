@@ -1,15 +1,15 @@
 import Layout from '../components/Layout';
 import { useParams, Navigate } from 'react-router-dom';
-import { optionalCourses } from '../data/optionalCourses';
-import { Check, Clock, Calendar, User, CreditCard, Tag } from 'lucide-react';
-import './OptionalDetails.css';
+import { ethicsCourses } from '../data/ethicsCourses';
+import { Check, Calendar, User, CreditCard, Star } from 'lucide-react';
+import './OptionalClassesDetails.css'; // Reusing styles
 
-const OptionalDetails = () => {
+const EthicsDetails = () => {
     const { id } = useParams<{ id: string }>();
-    const course = optionalCourses.find((c) => c.id === id);
+    const course = ethicsCourses.find((c) => c.id === id);
 
     if (!course) {
-        return <Navigate to="/courses/optionals" replace />;
+        return <Navigate to="/courses/essay" replace />;
     }
 
     return (
@@ -22,7 +22,6 @@ const OptionalDetails = () => {
                             <p className="details-subtitle">{course.subtitle}</p>
                             <div className="details-badges">
                                 <span className="badge"><User size={16} /> {course.faculty}</span>
-                                <span className="badge"><Clock size={16} /> {course.duration}</span>
                                 <span className="badge"><Calendar size={16} /> {course.date}</span>
                             </div>
                         </div>
@@ -33,12 +32,12 @@ const OptionalDetails = () => {
                     <div className="container details-grid-layout">
                         <div className="details-main">
                             <div className="feature-block glass-card">
-                                <h2>Features of the Module</h2>
+                                <h2>Details of the Module</h2>
                                 <ul className="feature-list">
-                                    {course.features.map((feature, index) => (
+                                    {course.details.map((detail, index) => (
                                         <li key={index}>
                                             <Check size={20} className="feature-icon" />
-                                            <span>{feature}</span>
+                                            <span>{detail}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -52,18 +51,17 @@ const OptionalDetails = () => {
                                     <CreditCard size={24} />
                                     <span className="fee-amount">{course.fee}</span>
                                 </div>
-                                <p className="discount-text">{course.discount}</p>
                                 <div className="sidebar-action">
                                     <button className="btn-enroll-now">Enroll Now</button>
                                 </div>
                             </div>
 
                             <div className="sidebar-card glass-card">
-                                <h3>Our USPS</h3>
+                                <h3>Our USP</h3>
                                 <ul className="usp-list-sidebar">
                                     {course.usps.map((usp, idx) => (
                                         <li key={idx}>
-                                            <Tag size={16} /> {usp}
+                                            {idx + 1}. {usp}
                                         </li>
                                     ))}
                                 </ul>
@@ -76,4 +74,4 @@ const OptionalDetails = () => {
     );
 };
 
-export default OptionalDetails;
+export default EthicsDetails;

@@ -1,10 +1,10 @@
 import Layout from '../components/Layout';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { essayCourses } from '../data/essayCourses';
+import { ethicsCourses } from '../data/ethicsCourses';
 import './OptionalClassesListing.css'; // Reusing styles
 
-const EssayListing = () => {
+const EthicsListing = () => {
     return (
         <Layout>
             <div className="optional-page">
@@ -13,9 +13,9 @@ const EssayListing = () => {
                         <h1 className="section-title-large">Essay Writing Module</h1>
                         <p className="section-subtitle-center">Master the art of essay writing with our specialized modules.</p>
 
-                        <div className={`optional-grid ${essayCourses.length === 1 ? 'single-item' : ''}`}>
-                            {essayCourses.map((course) => (
-                                <Link to={`/courses/general-studies/essay/${course.id}`} key={course.id} className="optional-card-large">
+                        <div className={`optional-grid ${ethicsCourses.length === 1 ? 'single-item' : ''}`}>
+                            {ethicsCourses.map((course) => (
+                                <Link to={`/courses/general-studies/ethics/${course.id}`} key={course.id} className="optional-card-large">
                                     <div className="optional-img-wrap">
                                         <img src={course.image} alt={course.title} />
                                         <div className="optional-overlay">
@@ -30,7 +30,7 @@ const EssayListing = () => {
                                         </ul>
                                         <div className="optional-footer">
                                             <span className="optional-fee">{course.fee}</span>
-                                            <Link to={`/courses/general-studies/essay/${course.id}`} className="btn-explore">
+                                            <Link to={`/courses/general-studies/ethics/${course.id}`} className="btn-explore">
                                                 Explore More <ArrowRight size={16} />
                                             </Link>
                                         </div>
@@ -45,4 +45,4 @@ const EssayListing = () => {
     );
 };
 
-export default EssayListing;
+export default EthicsListing;

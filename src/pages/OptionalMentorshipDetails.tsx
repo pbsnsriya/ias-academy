@@ -1,15 +1,15 @@
 import Layout from '../components/Layout';
 import { useParams, Navigate } from 'react-router-dom';
-import { essayCourses } from '../data/essayCourses';
-import { Check, Calendar, User, CreditCard, Star } from 'lucide-react';
+import { optionalMentorshipCourses } from '../data/optionalMentorshipCourses';
+import { Check, Clock, Calendar, User, CreditCard, BookOpen } from 'lucide-react';
 import './OptionalClassesDetails.css'; // Reusing styles
 
-const EssayDetails = () => {
+const OptionalMentorshipDetails = () => {
     const { id } = useParams<{ id: string }>();
-    const course = essayCourses.find((c) => c.id === id);
+    const course = optionalMentorshipCourses.find((c) => c.id === id);
 
     if (!course) {
-        return <Navigate to="/courses/essay" replace />;
+        return <Navigate to="/courses/mentorship" replace />;
     }
 
     return (
@@ -22,6 +22,7 @@ const EssayDetails = () => {
                             <p className="details-subtitle">{course.subtitle}</p>
                             <div className="details-badges">
                                 <span className="badge"><User size={16} /> {course.faculty}</span>
+                                {course.duration && <span className="badge"><Clock size={16} /> {course.duration}</span>}
                                 <span className="badge"><Calendar size={16} /> {course.date}</span>
                             </div>
                         </div>
@@ -32,40 +33,49 @@ const EssayDetails = () => {
                     <div className="container details-grid-layout">
                         <div className="details-main">
                             <div className="feature-block glass-card">
-                                <h2>Details of the Module</h2>
+                                <h2>Program Features</h2>
                                 <ul className="feature-list">
-                                    {course.details.map((detail, index) => (
+                                    {course.features.map((feature, index) => (
                                         <li key={index}>
                                             <Check size={20} className="feature-icon" />
-                                            <span>{detail}</span>
+                                            <span>{feature}</span>
                                         </li>
                                     ))}
                                 </ul>
                             </div>
+
+                            {course.timings && (
+                                <div className="feature-block glass-card" style={{ marginTop: '2rem' }}>
+                                    <h2>Timings</h2>
+                                    <ul className="feature-list">
+                                        <li><Clock size={20} className="feature-icon" /> {course.timings}</li>
+                                    </ul>
+                                </div>
+                            )}
                         </div>
 
                         <div className="details-sidebar">
                             <div className="sidebar-card glass-card">
-                                <h3>Course Fee</h3>
+                                <h3>Details</h3>
                                 <div className="fee-display">
                                     <CreditCard size={24} />
                                     <span className="fee-amount">{course.fee}</span>
                                 </div>
+                                {/* {course.discount && <p className="discount-text">{course.discount}</p>} */}
                                 <div className="sidebar-action">
                                     <button className="btn-enroll-now">Enroll Now</button>
                                 </div>
                             </div>
 
-                            <div className="sidebar-card glass-card">
-                                <h3>Our USP</h3>
-                                <ul className="usp-list-sidebar">
-                                    {course.usps.map((usp, idx) => (
-                                        <li key={idx}>
-                                            {idx + 1}. {usp}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                            {course.tests && (
+                                <div className="sidebar-card glass-card">
+                                    <h3>Number of Tests</h3>
+                                    <div className="fee-display">
+                                        <BookOpen size={24} />
+                                        <span style={{ fontSize: '1.2rem', fontWeight: 700 }}>{course.tests}</span>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </section>
@@ -74,4 +84,4 @@ const EssayDetails = () => {
     );
 };
 
-export default EssayDetails;
+export default OptionalMentorshipDetails;

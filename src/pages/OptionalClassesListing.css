@@ -24,6 +24,11 @@
     margin: 0 auto;
 }
 
+.optional-grid.single-item {
+    display: flex;
+    justify-content: center;
+}
+
 .optional-card-large {
     background: var(--bg-card);
     border-radius: 24px;
@@ -53,10 +58,13 @@
 .optional-overlay {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.5rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border-radius: 40px;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), #11111b82);
+    text-align: center;
 }
 
 .optional-subtitle {

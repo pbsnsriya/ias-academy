@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Layout from '../components/Layout';
 import { galleryData } from '../data/galleryData';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Play, X } from 'lucide-react';
 import './Gallery.css';
 
 interface GalleryProps {
@@ -12,7 +13,8 @@ interface GalleryProps {
 const Gallery = ({ defaultFilter = 'All' }: GalleryProps) => {
     const location = useLocation();
     const [filter, setFilter] = useState(defaultFilter);
-    const filters = ['All', 'Toppers', 'Public Events', 'Podcasts', 'Seminars'];
+    const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+    const filters = ['All', 'Toppers', 'Public Events', 'Podcasts', 'Seminars', 'Testimonials'];
 
     useEffect(() => {
         if (location.state && location.state.filter) {
@@ -57,10 +59,12 @@ const Gallery = ({ defaultFilter = 'All' }: GalleryProps) => {
                                     transition={{ duration: 0.3 }}
                                     key={item.id}
                                     className="gallery-item"
+                                    onClick={() => item.videoUrl && setSelectedVideo(item.videoUrl)}
                                 >
                                     <img src={item.image} alt={item.desc} loading="lazy" />
                                     <div className="gallery-overlay">
                                         <div className="overlay-content">
+                                            {item.videoUrl && <Play size={48} className="video-icon" style={{ marginBottom: '1rem' }} />}
                                             <span className="gallery-tag">{item.tag}</span>
                                             <p className="gallery-desc">{item.desc}</p>
                                         </div>
@@ -71,7 +75,37 @@ const Gallery = ({ defaultFilter = 'All' }: GalleryProps) => {
                     </motion.div>
                 </div>
             </div>
-        </Layout>
+
+            <AnimatePresence>
+                {selectedVideo && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="video-modal-overlay"
+                        onClick={() => setSelectedVideo(null)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.5, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.5, opacity: 0 }}
+                            className="video-modal-content"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <button className="video-modal-close" onClick={() => setSelectedVideo(null)}>
+                                <X size={32} />
+                            </button>
+                            <iframe
+                                src={`${selectedVideo}?autoplay=1`}
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </Layout >
     );
 };
 

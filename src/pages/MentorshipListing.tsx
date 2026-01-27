@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { mentorshipCourses } from '../data/mentorshipCourses';
-import './OptionalListing.css'; // Reusing styles
+import './OptionalClassesListing.css'; // Reusing styles
 
 const MentorshipListing = () => {
     return (
@@ -13,9 +13,9 @@ const MentorshipListing = () => {
                         <h1 className="section-title-large">Mentorship & Test Series</h1>
                         <p className="section-subtitle-center">Comprehensive guidance programs for Anthropology and Sociology options.</p>
 
-                        <div className="optional-grid">
+                        <div className={`optional-grid ${mentorshipCourses.length === 1 ? 'single-item' : ''}`}>
                             {mentorshipCourses.map((course) => (
-                                <div key={course.id} className="optional-card-large">
+                                <Link key={course.id} to={`/courses/general-studies/mentorship/${course.id}`} className="optional-card-large">
                                     <div className="optional-img-wrap">
                                         <img src={course.image} alt={course.title} />
                                         <div className="optional-overlay">
@@ -31,12 +31,12 @@ const MentorshipListing = () => {
                                         </ul>
                                         <div className="optional-footer">
                                             <span className="optional-fee">{course.fee}</span>
-                                            <Link to={`/courses/mentorship/${course.id}`} className="btn-explore">
+                                            <Link to={`/courses/general-studies/mentorship/${course.id}`} className="btn-explore">
                                                 Explore More <ArrowRight size={16} />
                                             </Link>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>

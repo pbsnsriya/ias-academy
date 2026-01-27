@@ -12,12 +12,12 @@ export interface CourseData {
     image: string;
 }
 
-export const optionalCourses: CourseData[] = [
+export const optionalClassesCourses: CourseData[] = [
     {
         id: 'anthropology',
         title: 'Anthropology Foundation',
         subtitle: 'Comprehensive 250+ Hrs Module',
-        faculty: 'Dr Vivekananda',
+        faculty: 'Dr G. Vivekananda',
         date: 'To be announced soon',
         duration: '250Hrs',
         fee: 'To be announced',
@@ -44,7 +44,7 @@ export const optionalCourses: CourseData[] = [
         id: 'sociology',
         title: 'Sociology Foundation',
         subtitle: 'Complete UPSC Syllabus coverage',
-        faculty: 'Dr Vivekananda',
+        faculty: 'Dr G. Vivekananda',
         date: 'To be announced soon',
         duration: '250Hrs',
         fee: 'To be announced',

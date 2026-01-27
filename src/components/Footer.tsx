@@ -23,7 +23,7 @@ const Footer = () => {
                         <div className='footer-links-set'>
                             <div className="footer-links">
                                 <h4>Useful Links</h4>
-                                <Link to="/projects">Our Courses</Link>
+                                <Link to="/courses">Our Courses</Link>
                                 <Link to="/about">About Our Academy</Link>
                                 <Link to="/gallery">Our Gallery</Link>
                                 <Link to="/blogs">Read Our Blogs</Link>
@@ -33,7 +33,7 @@ const Footer = () => {
                                 <h4>Information</h4>
                                 <Link to="/director">Our Director</Link>
                                 <Link to="/contact">Contact Us</Link>
-                                <Link to="/letstalk">Talk to Dr. Vivek</Link>
+                                <Link to="/letstalk">Talk to Dr. Vivekananda</Link>
                             </div>
                         </div>
 
@@ -52,7 +52,7 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <h1 className="bg-text">IAS ACADEMY</h1>
-                    <p className="copyright">© All Right Reserved by Dr. Vivekananda IAS Academy - 2026</p>
+                    <p className="copyright">© All Right Reserved by Dr. Vivekananda’s IAS Academy - 2026</p>
                 </div>
             </div>
         </footer>

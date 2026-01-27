@@ -1,15 +1,15 @@
 import Layout from '../components/Layout';
 import { useParams, Navigate } from 'react-router-dom';
-import { essayCourses } from '../data/essayCourses';
-import { Check, Calendar, User, CreditCard, Star } from 'lucide-react';
-import './OptionalClassesDetails.css'; // Reusing styles
+import { optionalClassesCourses } from '../data/optionalClassesCourses';
+import { Check, Clock, Calendar, User, CreditCard, Tag } from 'lucide-react';
+import './OptionalClassesDetails.css';
 
-const EssayDetails = () => {
+const OptionalClassesDetails = () => {
     const { id } = useParams<{ id: string }>();
-    const course = essayCourses.find((c) => c.id === id);
+    const course = optionalClassesCourses.find((c) => c.id === id);
 
     if (!course) {
-        return <Navigate to="/courses/essay" replace />;
+        return <Navigate to="/courses/optional-classes" replace />;
     }
 
     return (
@@ -22,6 +22,7 @@ const EssayDetails = () => {
                             <p className="details-subtitle">{course.subtitle}</p>
                             <div className="details-badges">
                                 <span className="badge"><User size={16} /> {course.faculty}</span>
+                                <span className="badge"><Clock size={16} /> {course.duration}</span>
                                 <span className="badge"><Calendar size={16} /> {course.date}</span>
                             </div>
                         </div>
@@ -32,12 +33,12 @@ const EssayDetails = () => {
                     <div className="container details-grid-layout">
                         <div className="details-main">
                             <div className="feature-block glass-card">
-                                <h2>Details of the Module</h2>
+                                <h2>Features of the Module</h2>
                                 <ul className="feature-list">
-                                    {course.details.map((detail, index) => (
+                                    {course.features.map((feature, index) => (
                                         <li key={index}>
                                             <Check size={20} className="feature-icon" />
-                                            <span>{detail}</span>
+                                            <span>{feature}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -51,6 +52,7 @@ const EssayDetails = () => {
                                     <CreditCard size={24} />
                                     <span className="fee-amount">{course.fee}</span>
                                 </div>
+                                {/* <p className="discount-text">{course.discount}</p> */}
                                 <div className="sidebar-action">
                                     <button className="btn-enroll-now">Enroll Now</button>
                                 </div>
@@ -74,4 +76,4 @@ const EssayDetails = () => {
     );
 };
 
-export default EssayDetails;
+export default OptionalClassesDetails;
