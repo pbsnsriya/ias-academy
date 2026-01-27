@@ -15,16 +15,21 @@ const Home = () => {
                     <div className="container hero-container">
                         <div className="hero-content">
                             <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
                                 transition={{ duration: 0.6 }}
                                 className="hero-title-wrapper"
                             >
-                                <h1 className="hero-title">
+                                <motion.h1
+                                    initial={{ y: 20 }}
+                                    animate={{ y: 0 }}
+                                    transition={{ duration: 0.6 }}
+                                    className="hero-title"
+                                >
                                     India’s Most <br />
                                     Affordable IAS <br />
                                     Training Academy
-                                </h1>
+                                </motion.h1>
                                 <div className="hero-circular-badge">
                                     <svg viewBox="0 0 100 100" width="120" height="120">
                                         <defs>
