@@ -14,6 +14,10 @@ import OptionalListing from './pages/OptionalListing';
 import OptionalDetails from './pages/OptionalDetails';
 import MentorshipListing from './pages/MentorshipListing';
 import MentorshipDetails from './pages/MentorshipDetails';
+import ValueListing from './pages/ValueListing';
+import ValueDetails from './pages/ValueDetails';
+import AppscListing from './pages/AppscListing';
+import AppscDetails from './pages/AppscDetails';
 import EssayListing from './pages/EssayListing';
 import EssayDetails from './pages/EssayDetails';
 import ScrollToTop from './components/ScrollToTop';
@@ -34,6 +38,10 @@ function App() {
                 <Route path="/courses/optionals/:id" element={<OptionalDetails />} />
                 <Route path="/courses/mentorship" element={<MentorshipListing />} />
                 <Route path="/courses/mentorship/:id" element={<MentorshipDetails />} />
+                <Route path="/courses/value" element={<ValueListing />} />
+                <Route path="/courses/value/:id" element={<ValueDetails />} />
+                <Route path="/courses/appsc" element={<AppscListing />} />
+                <Route path="/courses/appsc/:id" element={<AppscDetails />} />
                 <Route path="/courses/essay" element={<EssayListing />} />
                 <Route path="/courses/essay/:id" element={<EssayDetails />} />
                 <Route path="/courses/:id" element={<CourseDetails />} />

@@ -36,7 +36,14 @@ const Courses = () => {
             title: 'General Studies',
             duration: '',
             image: '/assets/images/general-studies.png',
+        },
+        {
+            id: 'appsc',
+            title: 'APPSC/TSPSC',
+            duration: '',
+            image: '/assets/images/general-studies.png',
         }
+
     ];
 
     return (
@@ -50,7 +57,9 @@ const Courses = () => {
                                 let linkPath = `/courses/${course.id}`; // Default
                                 if (course.title === 'Optionals') linkPath = '/courses/optionals';
                                 if (course.title === 'Mentorship / Test series') linkPath = '/courses/mentorship';
+                                if (course.title === 'Value - Additional Classes') linkPath = '/courses/value';
                                 if (course.title === 'Essay Ethics') linkPath = '/courses/essay';
+                                if (course.title === 'APPSC/TSPSC') linkPath = '/courses/appsc';
 
                                 return (
                                     <Link to={linkPath} key={index} className="course-card-alt">
