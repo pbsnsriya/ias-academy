@@ -1,7 +1,7 @@
 
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen, Play, Plus } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
 import './Home.css';
 
