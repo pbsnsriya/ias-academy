@@ -2,7 +2,7 @@
 import Layout from '../components/Layout';
 import { Link } from 'react-router-dom';
 
-import { BookOpen } from 'lucide-react';
+
 import './Courses.css';
 
 const Courses = () => {
