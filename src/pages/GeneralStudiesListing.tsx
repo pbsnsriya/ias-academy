@@ -36,7 +36,7 @@ const Courses = () => {
             <div className="courses-page">
                 <section className="courses-hero">
                     <div className="courses-container container">
-                        <h1 className="section-title-large">The latest courses from us.</h1>
+                        <h1 className="section-title-large">The latest courses in General Studies.</h1>
                         <div className={`courses-grid ${courses.length === 1 ? 'single-item' : ''}`}>
                             {courses.map((course, index) => {
                                 let linkPath = `/courses/${course.id}`; // Default
