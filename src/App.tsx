@@ -26,6 +26,8 @@ import ValueAdditionDetails from './pages/valueAdditionDetails';
 import ValueAdditionListing from './pages/valueAdditionListing';
 import TgpscAppscDetails from './pages/TgpscAppscDetails';
 import TgpscAppscListing from './pages/TgpscAppscListing';
+import BlogListing from './pages/BlogListing';
+import BlogDetails from './pages/BlogDetails';
 
 function App() {
     return (
@@ -57,6 +59,8 @@ function App() {
                 <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/testimonials" element={<Testimonials />} />
+                <Route path="/blogs" element={<BlogListing />} />
+                <Route path="/blogs/:id" element={<BlogDetails />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>
